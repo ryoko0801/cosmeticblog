@@ -1,0 +1,285 @@
+@import "compass";
+@import "partials/fonts";
+@import "partials/config";
+
+
+/*fonts*/
+
+/* =====================================================================
+	    style
+	========================================================================== */
+	/* ==============================
+	    base
+	================================*/
+	html{
+		line-height: 1.5;
+	}
+	body{
+		font-size: $baseSize;
+		font-family: $mainFont;
+		color: $body;
+		line-height: 1.4;
+	}
+	ul, li{
+		margin: 0;
+		padding: 0;
+	}
+	li{
+		list-style: none;
+	}
+	p{
+		font:{
+			size:$text;
+		}
+		font-family: $mainFont;
+		margin-top:0.5em;
+		color: $body;
+	}
+
+
+	h1{
+		font:{
+			family:$headline;
+			size: 100px;
+		}
+		color: $primary;
+		//margin-top:70em; 
+		margin-bottom:0.2em; 
+
+	}
+
+	h2{
+		font:{
+			family:$headline;
+			size: $h2;
+		}
+		color: $primary;
+
+	}
+	h3{
+		font:{
+			family:$headline;
+			size: $h3;
+			weight: $bold;
+		}
+		color: $primary;
+		margin-top: 0.6em;
+	}
+	h4{
+		font:{
+			family:$headline;
+			size: 3em;
+			weight: $bold;
+		}
+	}
+
+/*handy*/
+.mar-top{
+	margin-top:2em;
+	margin-bottom: 1em;
+}
+.margin-top{
+	margin-top:$topMar;
+}
+
+.margin-bottom{
+	margin-bottom:6em;
+}  
+
+.title-margin{
+	margin: 2.5em 0em  0em 0em; 
+}
+
+.white{color: white;}
+.primary{color: $primary;}
+.black{ color: black;}
+
+.center{
+	text-align: center;
+}
+
+.right{float: right;}
+
+.left{float: left;}
+
+.full{width: 100%;}
+
+.cf:before,
+.cf:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+}
+.cf:after {
+	clear: both;
+}
+.margin-auto {
+	margin: 0 auto;
+}
+
+
+/*********************************************************/
+			/*header Navigation*/
+/*********************************************************/
+.logo{
+	position: absolute;
+	top: 22px;
+	left: 100px;
+	width: 20%;
+}
+.bottom-line{
+	border-bottom: 4px black double;
+	border-top: 4px black double;
+}
+.top-nav{
+	ul{
+
+		display:table;
+		margin:0 auto;
+		padding: 1em;
+	}
+		//position: absolute;
+		min-height: 13em;
+		li{ 
+			display:table-cell;
+			float: left;
+			@media all and (max-width: 550px){
+				float: none;
+			}
+			a{
+
+				font:{ 
+					family: $menu;
+					size: 2em;
+				}
+				color: black;
+				margin: 1.2em;
+				padding:0.5em;
+				&:hover{
+					color: $primary;
+					padding:0.5em;
+				}
+			}
+
+		}
+	}
+
+	.logo{
+		width: 8em;
+		position: absolute;
+		top: 13px;
+		left: 200px;
+	}
+
+/*********************************************************/
+			/*HERO AREA*/
+/*********************************************************/
+
+.head-back{
+	background:{
+		image: url("../images/home/hero.jpg");
+		repeat: no-repeat;
+		position:center;
+		size: cover;
+/* 			height: 100vh; */
+}
+display:block;
+		/*more then the tablet size*/
+		@media all and (min-width: 55em){
+			min-height:75em;
+		}
+		
+	} 
+
+	.hero-link{
+		font:{
+			family:$headline;
+			size: 1.9em;
+		}
+		color: white;
+		margin: 0 1em;
+	}
+	.hero-logo{
+		width: 90%;
+		margin-top: 23em;
+	}
+	.hbutton {
+		border: 4px solid #ff007f;
+		color: #ff007f;
+		margin-top: 3em;
+	}
+
+
+
+
+/*********************************************************/
+			/*category*/
+/*********************************************************/
+
+
+/*********************************************************/
+			/*footer*/
+/*********************************************************/
+
+/*footer*/
+.footer-back{
+	background-color: black;
+	padding-top: 3em;
+}
+
+.foot-nav{
+	margin-bottom: 4em;
+	img {
+		width: 60%;
+		margin: 2em 0em 1em 0em;
+	}
+	p{
+		color: white;
+		margin: 0em;
+		font-size: 2em;
+	}
+}
+.foot-bar{
+	color: white;
+	margin-right: 1.2em;
+	padding:1.8em;	
+}
+
+.nav-icon 
+i{ 
+	margin: 0.2em;
+	&:hover{
+		color: $primary;
+	}
+}
+
+
+.foot-nav-item li{
+	padding:0.6em;	
+	a{ 
+		color: white;
+		font:{ family: $menu;
+			size: 1.5em;
+		}
+		&:hover{
+			color: $primary;
+		}
+	}
+}
+
+/*form for contact*/
+.contact-form{
+	textarea{ height: 7em;
+		margin-bottom: 2em;}
+		label{color: white;     margin-top: 1em; 
+			font-family: $headline; font-size: 1.5em;}
+		}
+		[type="submit"]{
+			font-family: $headline; 
+			font-size: 1.8em;
+		}
+
+
+/*********************************************************/
+			/*contact*/
+/*********************************************************/
+
