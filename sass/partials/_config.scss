@@ -1,13 +1,7 @@
-/*
-To change this license header, choose License Headers in Project Properties.
-To change this template file, choose Tools | Templates
-and open the template in the editor.
-*/
-/* 
-    Created on : Jan 21, 2016, 1:29:10 PM
-    Author     : iam
-*/
 
+/* ==============================
+	  colour
+================================*/
 // base config 
 $primary: #ed7c98;
 $tag: #ffcac2;
@@ -21,8 +15,6 @@ $grey: #cccccc;
 $white: white;
 
 
-//image fade effect
-$global-radius: 4px;
 
 
 //image fade effect
@@ -30,5 +22,66 @@ $topMar:0.7em;
 $bottom-Mar:20em;
 $bottomMar:10em;
 $head-mar:20em;
+
+
+/* ==============================
+	   fonts
+================================*/
+// base config fonts
+
+//font type
+$mainFont: 'Josefin Slab', serif;
+$headding: 'Prata', serif;
+$menu: 'Limelight', cursive;
+
+
+
+//font weight
+$mainweight: 400;
+$bold: 700;
+
+// base config fonts size
+//to make 1em to 10px
+$baseSize: 62.5%;
+$text: 1.9em;
+$title: 5.6em;
+$date: 2em;
+$tag: 2em;
+
+
+
+//h1 size
+$h1_size: 6em;
+//h2 size
+$h2_size: 4em;
+//h1 size
+$h3_size: 3em;
+//h4 size
+$h4_size: 2.5em;
+//h4 size
+$h5_size: 1.9em;
+//base text size
+$text-size: 1.6em;
+
+
+
+
+/* ==============================
+	  margins
+================================*/
+/* margin for each page top  */
+$topMar: 7.5em;
+/* margin for each page bottom */
+$bottomMar: 8em;
+
+
+
+
+
+
+
+
+
+
 
 

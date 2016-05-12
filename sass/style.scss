@@ -39,43 +39,49 @@
 
 	h1{
 		font:{
-			family:$headline;
-			size: 100px;
+			family:$headding;
+			size: $h1_size;
 		}
 		color: $primary;
-		//margin-top:70em; 
 		margin-bottom:0.2em; 
-
 	}
 
 	h2{
 		font:{
-			family:$headline;
-			size: $h2;
+			family:$headding;
+			size: $h2_size;
 		}
 		color: $primary;
-
 	}
-	h3{
+
+		h3{
 		font:{
-			family:$headline;
-			size: $h3;
-			weight: $bold;
+			family:$headding;
+			size: $h3_size;
 		}
 		color: $primary;
-		margin-top: 0.6em;
 	}
-	h4{
+			h4{
 		font:{
-			family:$headline;
-			size: 3em;
-			weight: $bold;
+			family:$menu;
+			size: $h4_size;
 		}
+		color: $body;
+		margin-top: 0.3em;
 	}
+	
 
+		h5{
+		font:{
+			family:$headding;
+			size: $h5_size;
+		}
+		color: $primary;
+	}
+	
 /*handy*/
-.mar-top{
-	margin-top:2em;
+.section-margin-top{
+	margin-top:3em;
 	margin-bottom: 1em;
 }
 .margin-top{
@@ -190,24 +196,12 @@ display:block;
 		
 	} 
 
-	.hero-link{
-		font:{
-			family:$headline;
-			size: 1.9em;
-		}
-		color: white;
-		margin: 0 1em;
-	}
+	
 	.hero-logo{
 		width: 90%;
 		margin-top: 23em;
 	}
-	.hbutton {
-		border: 4px solid #ff007f;
-		color: #ff007f;
-		margin-top: 3em;
-	}
-
+	
 
 
 
@@ -235,7 +229,7 @@ display:block;
 	p{
 		color: white;
 		margin: 0em;
-		font-size: 2em;
+		font-size: 1.8em;
 	}
 }
 .foot-bar{
@@ -271,10 +265,10 @@ i{
 	textarea{ height: 7em;
 		margin-bottom: 2em;}
 		label{color: white;     margin-top: 1em; 
-			font-family: $headline; font-size: 1.5em;}
+			font-family: $headding; font-size: 1.5em;}
 		}
 		[type="submit"]{
-			font-family: $headline; 
+			font-family: $headding; 
 			font-size: 1.8em;
 		}
 
