@@ -14,6 +14,13 @@ and open the template in the editor.
 ================================*/
 /* margin for each page top  */
 /* margin for each page bottom */
+/* ==============================
+	  custom function
+================================*/
+/* * {
+    outline: 1px solid #ccc;
+}
+ */
 /*fonts*/
 /* =====================================================================
 	    style
@@ -21,12 +28,12 @@ and open the template in the editor.
 /* ==============================
     base
 ================================*/
-/* line 14, ../sass/style.scss */
+/* line 20, ../sass/style.scss */
 html {
   line-height: 1.5;
 }
 
-/* line 17, ../sass/style.scss */
+/* line 23, ../sass/style.scss */
 body {
   font-size: 62.5%;
   font-family: "Josefin Slab", serif;
@@ -34,18 +41,18 @@ body {
   line-height: 1.4;
 }
 
-/* line 23, ../sass/style.scss */
+/* line 29, ../sass/style.scss */
 ul, li {
   margin: 0;
   padding: 0;
 }
 
-/* line 27, ../sass/style.scss */
+/* line 33, ../sass/style.scss */
 li {
   list-style: none;
 }
 
-/* line 30, ../sass/style.scss */
+/* line 36, ../sass/style.scss */
 p {
   font-size: 1.9em;
   font-family: "Josefin Slab", serif;
@@ -53,7 +60,7 @@ p {
   color: #43454a;
 }
 
-/* line 40, ../sass/style.scss */
+/* line 46, ../sass/style.scss */
 h1 {
   font-family: "Prata", serif;
   font-size: 6em;
@@ -61,21 +68,21 @@ h1 {
   margin-bottom: 0.2em;
 }
 
-/* line 49, ../sass/style.scss */
+/* line 55, ../sass/style.scss */
 h2 {
   font-family: "Prata", serif;
   font-size: 4em;
   color: #ed7c98;
 }
 
-/* line 57, ../sass/style.scss */
+/* line 63, ../sass/style.scss */
 h3 {
   font-family: "Prata", serif;
   font-size: 3em;
   color: #ed7c98;
 }
 
-/* line 64, ../sass/style.scss */
+/* line 70, ../sass/style.scss */
 h4 {
   font-family: "Limelight", cursive;
   font-size: 2.5em;
@@ -83,7 +90,7 @@ h4 {
   margin-top: 0.3em;
 }
 
-/* line 74, ../sass/style.scss */
+/* line 80, ../sass/style.scss */
 h5 {
   font-family: "Prata", serif;
   font-size: 1.9em;
@@ -91,63 +98,71 @@ h5 {
 }
 
 /*handy*/
-/* line 83, ../sass/style.scss */
+/* margins for each section in the page */
+/* line 90, ../sass/style.scss */
 .section-margin-top {
   margin-top: 3em;
   margin-bottom: 1em;
 }
 
-/* line 87, ../sass/style.scss */
+/*  margin top for */
+/* line 95, ../sass/style.scss */
 .margin-top {
   margin-top: 7.5em;
 }
 
-/* line 91, ../sass/style.scss */
+/*  margin top cms*/
+/* line 100, ../sass/style.scss */
+.margin-top-cms {
+  margin-top: 15em;
+}
+
+/* line 104, ../sass/style.scss */
 .margin-bottom {
   margin-bottom: 6em;
 }
 
-/* line 95, ../sass/style.scss */
+/* line 108, ../sass/style.scss */
 .title-margin {
   margin: 2.5em 0em  0em 0em;
 }
 
-/* line 99, ../sass/style.scss */
+/* line 112, ../sass/style.scss */
 .white {
   color: white;
 }
 
-/* line 100, ../sass/style.scss */
+/* line 113, ../sass/style.scss */
 .primary {
   color: #ed7c98;
 }
 
-/* line 101, ../sass/style.scss */
+/* line 114, ../sass/style.scss */
 .black {
   color: black;
 }
 
-/* line 103, ../sass/style.scss */
+/* line 116, ../sass/style.scss */
 .center {
   text-align: center;
 }
 
-/* line 107, ../sass/style.scss */
+/* line 120, ../sass/style.scss */
 .right {
   float: right;
 }
 
-/* line 109, ../sass/style.scss */
+/* line 122, ../sass/style.scss */
 .left {
   float: left;
 }
 
-/* line 111, ../sass/style.scss */
+/* line 124, ../sass/style.scss */
 .full {
   width: 100%;
 }
 
-/* line 113, ../sass/style.scss */
+/* line 126, ../sass/style.scss */
 .cf:before,
 .cf:after {
   content: " ";
@@ -156,12 +171,12 @@ h5 {
   /* 2 */
 }
 
-/* line 118, ../sass/style.scss */
+/* line 131, ../sass/style.scss */
 .cf:after {
   clear: both;
 }
 
-/* line 121, ../sass/style.scss */
+/* line 134, ../sass/style.scss */
 .margin-auto {
   margin: 0 auto;
 }
@@ -169,7 +184,7 @@ h5 {
 /*********************************************************/
 /*header Navigation*/
 /*********************************************************/
-/* line 129, ../sass/style.scss */
+/* line 142, ../sass/style.scss */
 .logo {
   position: absolute;
   top: 22px;
@@ -177,34 +192,34 @@ h5 {
   width: 20%;
 }
 
-/* line 135, ../sass/style.scss */
+/* line 148, ../sass/style.scss */
 .bottom-line {
   border-bottom: 4px black double;
   border-top: 4px black double;
 }
 
-/* line 139, ../sass/style.scss */
+/* line 152, ../sass/style.scss */
 .top-nav {
   min-height: 13em;
 }
-/* line 140, ../sass/style.scss */
+/* line 153, ../sass/style.scss */
 .top-nav ul {
   display: table;
   margin: 0 auto;
   padding: 1em;
 }
-/* line 148, ../sass/style.scss */
+/* line 161, ../sass/style.scss */
 .top-nav li {
   display: table-cell;
   float: left;
 }
 @media all and (max-width: 550px) {
-  /* line 148, ../sass/style.scss */
+  /* line 161, ../sass/style.scss */
   .top-nav li {
     float: none;
   }
 }
-/* line 154, ../sass/style.scss */
+/* line 167, ../sass/style.scss */
 .top-nav li a {
   font-family: "Limelight", cursive;
   font-size: 2em;
@@ -212,13 +227,13 @@ h5 {
   margin: 1.2em;
   padding: 0.5em;
 }
-/* line 163, ../sass/style.scss */
+/* line 176, ../sass/style.scss */
 .top-nav li a:hover {
   color: #ed7c98;
   padding: 0.5em;
 }
 
-/* line 172, ../sass/style.scss */
+/* line 185, ../sass/style.scss */
 .logo {
   width: 8em;
   position: absolute;
@@ -229,7 +244,7 @@ h5 {
 /*********************************************************/
 /*HERO AREA*/
 /*********************************************************/
-/* line 183, ../sass/style.scss */
+/* line 196, ../sass/style.scss */
 .head-back {
   background-image: url("../images/home/hero.jpg");
   background-repeat: no-repeat;
@@ -240,13 +255,13 @@ h5 {
   /*more then the tablet size*/
 }
 @media all and (min-width: 55em) {
-  /* line 183, ../sass/style.scss */
+  /* line 196, ../sass/style.scss */
   .head-back {
     min-height: 75em;
   }
 }
 
-/* line 200, ../sass/style.scss */
+/* line 213, ../sass/style.scss */
 .hero-logo {
   width: 90%;
   margin-top: 23em;
@@ -259,68 +274,68 @@ h5 {
 /*footer*/
 /*********************************************************/
 /*footer*/
-/* line 218, ../sass/style.scss */
+/* line 231, ../sass/style.scss */
 .footer-back {
   background-color: black;
   padding-top: 3em;
 }
 
-/* line 223, ../sass/style.scss */
+/* line 236, ../sass/style.scss */
 .foot-nav {
   margin-bottom: 4em;
 }
-/* line 225, ../sass/style.scss */
+/* line 238, ../sass/style.scss */
 .foot-nav img {
   width: 60%;
   margin: 2em 0em 1em 0em;
 }
-/* line 229, ../sass/style.scss */
+/* line 242, ../sass/style.scss */
 .foot-nav p {
   color: white;
   margin: 0em;
   font-size: 1.8em;
 }
 
-/* line 235, ../sass/style.scss */
+/* line 248, ../sass/style.scss */
 .foot-bar {
   color: white;
   margin-right: 1.2em;
   padding: 1.8em;
 }
 
-/* line 241, ../sass/style.scss */
+/* line 254, ../sass/style.scss */
 .nav-icon
 i {
   margin: 0.2em;
 }
-/* line 244, ../sass/style.scss */
+/* line 257, ../sass/style.scss */
 .nav-icon
 i:hover {
   color: #ed7c98;
 }
 
-/* line 250, ../sass/style.scss */
+/* line 263, ../sass/style.scss */
 .foot-nav-item li {
   padding: 0.6em;
 }
-/* line 252, ../sass/style.scss */
+/* line 265, ../sass/style.scss */
 .foot-nav-item li a {
   color: white;
   font-family: "Limelight", cursive;
   font-size: 1.5em;
 }
-/* line 257, ../sass/style.scss */
+/* line 270, ../sass/style.scss */
 .foot-nav-item li a:hover {
   color: #ed7c98;
 }
 
 /*form for contact*/
-/* line 265, ../sass/style.scss */
+/* line 278, ../sass/style.scss */
 .contact-form textarea {
   height: 7em;
   margin-bottom: 2em;
 }
-/* line 267, ../sass/style.scss */
+/* line 280, ../sass/style.scss */
 .contact-form label {
   color: white;
   margin-top: 1em;
@@ -328,7 +343,7 @@ i:hover {
   font-size: 1.5em;
 }
 
-/* line 270, ../sass/style.scss */
+/* line 283, ../sass/style.scss */
 [type="submit"] {
   font-family: "Prata", serif;
   font-size: 1.8em;
@@ -337,3 +352,88 @@ i:hover {
 /*********************************************************/
 /*contact*/
 /*********************************************************/
+/*********************************************************/
+/*Cms*/
+/*********************************************************/
+/*LOGIN*/
+/* line 304, ../sass/style.scss */
+.login_container {
+  background-color: #ffcac2;
+  padding: 5em 0em;
+  margin-top: 12em;
+}
+/* line 308, ../sass/style.scss */
+.login_container p {
+  font-size: 5em;
+  font-family: "Limelight", cursive;
+  color: #ed7c98;
+}
+
+/* line 315, ../sass/style.scss */
+.cms-back {
+  background-image: url("../images/cms/back.jpg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+/* line 325, ../sass/style.scss */
+.cms-nav li {
+  padding: 2em 0em;
+  background-color: #ffcac2;
+}
+/* line 328, ../sass/style.scss */
+.cms-nav li a {
+  font-family: "Limelight", cursive;
+  font-size: 2em;
+  color: black;
+  padding: 0.3em;
+}
+/* line 335, ../sass/style.scss */
+.cms-nav li a:hover {
+  color: #ed7c98;
+}
+
+/* line 341, ../sass/style.scss */
+th {
+  background-color: #ed7c98;
+  color: white;
+  border: solid 1px black;
+  text-align: center;
+  font-family: "Limelight", cursive;
+  font-size: 1.5em;
+}
+
+/* line 349, ../sass/style.scss */
+td {
+  border: 1px solid;
+}
+
+/* line 352, ../sass/style.scss */
+td:nth-child(2) {
+  width: 15%;
+}
+
+/* line 355, ../sass/style.scss */
+td:nth-child(5) {
+  width: 15%;
+}
+
+/* line 356, ../sass/style.scss */
+td:nth-child(6) {
+  width: 15%;
+}
+
+/* line 358, ../sass/style.scss */
+.list {
+  font-family: "Prata", serif;
+  font-size: 1.6em;
+}
+
+/*********************************************************/
+/*Controll jquery class*/
+/*********************************************************/
+/* line 366, ../sass/style.scss */
+.hide {
+  display: none;
+}

@@ -3,6 +3,12 @@
 @import "partials/config";
 
 
+
+/* * {
+    outline: 1px solid #ccc;
+}
+ */
+
 /*fonts*/
 
 /* =====================================================================
@@ -80,12 +86,19 @@
 	}
 	
 /*handy*/
+/* margins for each section in the page */
 .section-margin-top{
 	margin-top:3em;
 	margin-bottom: 1em;
 }
+/*  margin top for */
 .margin-top{
 	margin-top:$topMar;
+}
+
+/*  margin top cms*/
+.margin-top-cms{
+	margin-top:15em;
 }
 
 .margin-bottom{
@@ -277,3 +290,79 @@ i{
 			/*contact*/
 /*********************************************************/
 
+
+
+
+
+
+
+
+/*********************************************************/
+			/*Cms*/
+/*********************************************************/
+	/*LOGIN*/
+.login_container{
+	background-color: #ffcac2;
+    padding: 5em 0em;
+    margin-top: 12em;
+    p{
+    	font-size: 5em;
+    	font-family: $menu;
+    	color: $primary;
+    }
+}
+
+.cms-back{
+	background:{
+		image: url('../images/cms/back.jpg');
+		repeat: no-repeat;
+		attachment: fixed;
+		size: cover; 
+	}
+}
+
+.cms-nav{
+		li{ 
+			padding: 2em 0em ;
+			background-color: #ffcac2;
+			a{
+				font:{ 
+					family: $menu;
+					size: 2em;
+				}
+				color: black;
+				padding:0.3em;
+				&:hover{
+					color: $primary;
+				}
+			}
+		}
+	}
+	th{
+		background-color:$primary;
+		color: white;
+		border:solid 1px black;
+		text-align:center;
+		  font-family:$menu;
+		  font-size: 1.5em;
+	}
+	td{
+		border: 1px solid;
+	}
+	td:nth-child(2){width:15%;}
+	//td:nth-child(3){width:20%;}
+	//td:nth-child(4){width:20%;}
+	td:nth-child(5){width:15%;}
+	td:nth-child(6){width:15%;}
+	//td:nth-child(7){width:10%;}
+	.list{
+		font-family:$headding;
+		font-size: 1.6em;
+	}
+	
+	/*********************************************************/
+			/*Controll jquery class*/
+/*********************************************************/
+.hide{
+	display: none;
+}
