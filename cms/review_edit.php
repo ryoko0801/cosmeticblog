@@ -7,7 +7,7 @@ include("partial/cmsheader.php");
 $category= $_POST["category"];
 //connect to the datbase
 $conn = database_conn();
-
+//if the delete btn has been pressed
 if (isset($_POST['edit']['delete'])) {
  //delete from database
 	$upload = false;
@@ -30,7 +30,7 @@ if (isset($_POST['edit']['delete'])) {
 		$subcategoryOption="";
 		$upload = true;
 		if($_POST["category"] == "reviews"){
-			//to change the subcategory
+		//to change the subcategory
 			$subcategoryOption .="<select name='subcategory' required>
 			<option value='eyemakeup'>Eye Makeup</option>
 			<option value='basemakeup'>Base Makeup</option>
@@ -40,7 +40,7 @@ if (isset($_POST['edit']['delete'])) {
 		</select>" ;
 		$query = "SELECT * FROM review_table WHERE id=$_POST[id]";
 	}else if($_POST["category"] == "trend"){
-			//to change the subcategory
+		//to change the subcategory
 		$subcategoryOption .="<select name='subcategory' required>
 		<option value='hairstyle'>Hair style</option>
 		<option value='makeup'>Trend Makeup</option>
@@ -49,7 +49,7 @@ if (isset($_POST['edit']['delete'])) {
 	</select>" ;
 	$query = "SELECT * FROM trend_table WHERE id=$_POST[id]";
 }
-		//sql to grub the data from database
+//sql to grub the data from database
 $queryResult = mysqli_query($conn, $query);
 
 if($queryResult == false){
@@ -96,13 +96,10 @@ if($queryResult == false){
 				<input type="hidden" name="current" value="<?php echo $image;?>" />
 				<input type="hidden" name="id" value="<?php echo $id;?>" />
 				<input type="hidden" name="category" value="<?php echo $category;?>" />
-
-
+				<!-- submit  -->
 				<input name="updateSubmit" type="submit" value="Submit the Change">
 			</form>
-
 			<script type="text/javascript" src="./ckeditor/ckeditor.js"></script>
-
 			<script> 
 				$(function(){
 					CKEDITOR.replace( 'editor1'); 

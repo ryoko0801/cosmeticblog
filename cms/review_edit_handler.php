@@ -39,6 +39,7 @@ if(isset($_POST['updateSubmit'])) {
 	if($queryResult == false){
 		echo $conn->error;
 		exit; }
+	//back to the list of posts
 	echo "<script> location.replace('reviewpage_list.php?category=".$category."'); </script>";
 	}/*end of update*/
 	mysqli_close($conn);
