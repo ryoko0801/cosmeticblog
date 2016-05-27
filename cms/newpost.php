@@ -3,39 +3,55 @@
 include("logout_handler.php");
 include("partial/cmsheader.php");
 ?>
+<?php 
+if(isset($_GET["category"])){
+	// empty var to put the option
+	//subcategory option should be different from each category
+	$subcategoryOption="";
+	$category="";
+	if($_GET["category"] == "reviews"){
+			$category="reviews";
+			$subcategoryOption .="<select name='subcategory' required>
+					<option value='eyemakeup'>Eye Makeup</option>
+					<option value='basemakeup'>Base Makeup</option>
+					<option value='skincare'>Skin care</option>
+					<option value='perfume'>Perfume</option>
+					<option value='makeuptool'>Makeup tools</option>
+				</select>" ;
+		}else if($_GET["category"] == "trend"){
+			$category="trend";
+			$subcategoryOption .="<select name='subcategory' required>
+					<option value='hairstyle'>Hair style</option>
+					<option value='makeup'>Trend Makeup</option>
+					<option value='skincare'>Nail art</option>
+					<option value='perfume'>Fasion</option>
+				</select>" ;
+		}//end of else if
+	}
+?>
 	<div class="row margin-top-cms">
 		<!-- include the menu -->
 		<?php include("partial/cmsmenu.php");?>
 		<div class="large-9 columns">
-			<h2> NEW Post</h2>
-			<p>You can <em>create</em> New post from this page. <br> Make sure to select the category.</p>
+			<h2> <?php echo $category;?> New Post</h2>
+			<p>You can <em>create</em> New post from this page. Make sure to select the category.</p>
 			<div class="mar-top">
 				<form action="newpost_handler.php" method="post" enctype="multipart/form-data">
 				<label>Title of the post
-					<input type="text" name="title">
+					<input type="text" name="title" required>
 				</label><br>
 				<label>Sub category
-					<select name="subcategory" value="<?php echo $subcategory; ?>">
-						<option value="eyemakeup">Eye Makeup</option>
-						<option value="basemakeup">Base Makeup</option>
-						<option value="skincare">Skin care</option>
-						<option value="perfume">Perfume</option>
-						<option value="makeuptool">Makeup tools</option>
-					</select>
+					<?php echo $subcategoryOption;?>
 				</label><br>
-					<textarea id="editor1" name="contents" rows="10" cols="80" class="ckeditor"><?php echo $contents;?> </textarea><br>
+					<textarea id="editor1" name="contents" rows="10" cols="80" class="ckeditor" required></textarea><br>
 					<label>Tags
-						<input type="text" name="tag" value="<?php echo $tag; ?>"/>
+						<input type="text" name="tag" value=""/>
 					</label><br>
-					<label>Sumbnail Image (small image)
-						   <input type="file" name="image" value="<?php echo $upload;?>"/>
+					<label>Thumbnail Image (small image)
+						   <input type="file" name="image" value="<?php  echo $upload = true;?>" required/>
 					</label>
-					<span>Curent Image<img src="../images/thumb/<?php echo $image;?>"/></span><br>
-
-					<input type="hidden" name="current" value="<?php echo $image;?>" />
-					<input type="hidden" name="id" value="<?php echo $id;?>" />
-
-					<input name="updateSubmit" type="submit" value="Submit the Change">
+					<input name="category" type="hidden" value="<?php echo $category;?>">
+					<input name="submit" type="submit" value="Submit New Post">
 				</form>
 
 				<script type="text/javascript" src="./ckeditor/ckeditor.js"></script>

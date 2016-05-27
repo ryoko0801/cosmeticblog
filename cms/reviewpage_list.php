@@ -9,8 +9,13 @@ include("partial/cmsheader.php");
 $reviewTable = "";
 	//connect to the database
 $conn = database_conn();
+if($_GET["category"] == "reviews"){
+	$query = "SELECT * FROM review_table ORDER BY id DESC";
+}else if($_GET["category"] == "trend"){
+	$query = "SELECT * FROM trend_table ORDER BY id DESC";
+}
 
-$query = "SELECT * FROM review_table ORDER BY id DESC";
+
 $queryResult = mysqli_query( $conn, $query );
 
 if($queryResult == false){
@@ -35,6 +40,7 @@ if( $numberOfRows > 0 ){
 
 		$reviewTable .="<tr>
 		<form action='review_edit.php' method='post'>
+		<input type='hidden' name='category' value='".$category."' />
 			<td class=''>
 				<input type='text' name='id' value='$id'>
 			</td>
@@ -61,10 +67,6 @@ if( $numberOfRows > 0 ){
 //kill the connection
 mysqli_close($conn);
 ?>
-
-
-
-
 <div class="row margin-top-cms">
 	<!-- include the menu -->
 	<?php include("partial/cmsmenu.php");?>
@@ -83,5 +85,5 @@ mysqli_close($conn);
 		</div>
 	</div><!-- end of columns -->
 </div><!-- end of row -->
-<?php include("partial/cmsfooter.php");?>
+<?php include("partial/cmsfooter.php");
 
