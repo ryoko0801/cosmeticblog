@@ -19,7 +19,7 @@ if (isset($_POST['edit']['delete'])) {
 	if($deleteResult == false){
 		echo $conn->error;
 		exit; }
-		//echo "<script> location.replace('reviewpage_list.php'); </script>";
+	echo "<script> location.replace('reviewpage_list.php'); </script>";
 		
 	} elseif (isset($_POST['edit']['update'])) {
 		$upload = true;
@@ -69,14 +69,15 @@ if (isset($_POST['edit']['delete'])) {
 							<input type="text" name="tag" value="<?php echo $tag; ?>"/>
 						</label><br>
 						<label>Sumbnail Image (small image)
-							   <input type="file" name="image" value="<?php echo $upload;?>" />
-						</label><span>Curent Image<img src="../images/thumb/<?php echo $image;?>"/></span><br>
+							   <input type="file" name="image" value="<?php echo $upload;?>"/>
+						</label>
+						<span>Curent Image<img src="../images/thumb/<?php echo $image;?>"/></span><br>
+
+						<input type="hidden" name="current" value="<?php echo $image;?>" />
 						<input type="hidden" name="id" value="<?php echo $id;?>" />
 
 						<input name="updateSubmit" type="submit" value="Submit the Change">
 					</form>
-					<?php var_dump($_POST['id']);?> 
-					<?php var_dump($id);?>
 
 					<script type="text/javascript" src="./ckeditor/ckeditor.js"></script>
 			
@@ -84,29 +85,8 @@ if (isset($_POST['edit']['delete'])) {
 						$(function(){
 							CKEDITOR.replace( 'editor1'); 
 						});
-
 					</script>
-
 				</div>
 			</div><!-- end of columns -->
 		</div><!-- end of row -->
-		<?php include("partial/cmsfooter.php");?>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-		<?php include("partial/cmsfooter.php");?>
+		<?php include("partial/cmsfooter.php");

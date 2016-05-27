@@ -349,15 +349,27 @@ i{
 	td{
 		border: 1px solid;
 	}
-	td:nth-child(2){width:15%;}
-	//td:nth-child(3){width:20%;}
-	//td:nth-child(4){width:20%;}
+	td:nth-child(2){width:10%;}
+	td:nth-child(3){width:20%;}
+	td:nth-child(4){width:40%;}
 	td:nth-child(5){width:15%;}
 	td:nth-child(6){width:15%;}
-	//td:nth-child(7){width:10%;}
+	td:nth-child(7){width:10%;}
 	.list{
 		font-family:$headding;
 		font-size: 1.6em;
+	}
+
+	.small{
+		width:100%;
+	}
+	.table-date{
+		font-size: 1.3em;
+		font-family: $sans;
+		font-weight: $bold;
+		color: $primary;
+		border: 1px solid $primary;
+		text-align: center;
 	}
 	
 	/*********************************************************/

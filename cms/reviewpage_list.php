@@ -31,36 +31,31 @@ if( $numberOfRows > 0 ){
 		$tag = $row["tag"];
 		$category = $row["category"];
 
-		var_dump($contents);
+		//var_dump($contents);
 
-		$reviewTable .="<tr >
-<form action='review_edit.php' method='post'>
-
-	<td class=''>
-		<input type='text' name='id' value='$id'>
-	</td>
-	<td class=''>
-		<img src='../images/thumb/".$image."'/>
-		<input type='hidden' name='imagename' value='".$image."' />
-	</td>
-
-	<td id='content".$id."' class='js-list-text'>
-			<h6>".$title."</h6>
-			".$contents."
-	</td>
-		<td class='list'>
-			".$subcategory."
-		</td>
-		<td class='list'>
-			".$tag."
-		</td>
-		<td class=''>
-			<button class='button' type='submit' name='edit[update]' value='update'>UPDATE </button><br>
-			<button class='button' type='submit' name='edit[delete]' value='delete'>DELETE </button>
-		</td>
-</form>
+		$reviewTable .="<tr>
+		<form action='review_edit.php' method='post'>
+			<td class=''>
+				<input type='text' name='id' value='$id'>
+			</td>
+			<td class=''>
+				<img class='small' src='../images/thumb/".$image."'/>
+				<input type='hidden' name='imagename' value='".$image."' />
+			</td>
+			<td id='content".$id."' class='js-list-text'>
+				<p class='table-date'>".$date."</p>
+				<h6>".$title."</h6>
+				".$contents."
+			</td>
+			<td class='list'>".$subcategory."</td>
+			<td class='list'>".$tag."</td>
+			<td class=''>
+				<button class='button' type='submit' name='edit[update]' value='update'>UPDATE </button><br>
+				<button class='button' type='submit' name='edit[delete]' value='delete'>DELETE </button>
+			</td>
+		</form>
 	</tr>";
-		}/*end of while*/
+}/*end of while*/
 }/*end of if*/
 //var_dump($reviewTable);
 //kill the connection
@@ -77,14 +72,14 @@ mysqli_close($conn);
 		<h2>Edit Review page</h2>
 		<p>You can update or deleate previous post from this page.<br>If you want to update or delete previous posts, press "DELETE" or "UPDATE" buttons beside of each post. If you want to Post new blog, select the New Post from the menu.</p>
 		<div class="mar-top">
-
-
-	<table>
-			<tr><th>ID</th><th>Thumbnail</th><th>Title/Contents</th>
-			<th>subcategory</th><th>Tags</th><th>Edit</th></tr>
-			<?php echo $reviewTable ;?>
-
-	</table>
+			<table>
+				<thead>
+					<tr><th>ID</th><th>Thumbnail</th><th>Title/Contents</th><th>subcategory</th><th>Tags</th><th>Edit</th></tr>
+				</thead>
+				<tbody>
+					<?php echo $reviewTable ;?>
+				</tbody>
+			</table>
 		</div>
 	</div><!-- end of columns -->
 </div><!-- end of row -->

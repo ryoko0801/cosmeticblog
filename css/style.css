@@ -411,7 +411,17 @@ td {
 
 /* line 352, ../sass/style.scss */
 td:nth-child(2) {
-  width: 15%;
+  width: 10%;
+}
+
+/* line 353, ../sass/style.scss */
+td:nth-child(3) {
+  width: 20%;
+}
+
+/* line 354, ../sass/style.scss */
+td:nth-child(4) {
+  width: 40%;
 }
 
 /* line 355, ../sass/style.scss */
@@ -424,16 +434,36 @@ td:nth-child(6) {
   width: 15%;
 }
 
+/* line 357, ../sass/style.scss */
+td:nth-child(7) {
+  width: 10%;
+}
+
 /* line 358, ../sass/style.scss */
 .list {
   font-family: "Prata", serif;
   font-size: 1.6em;
 }
 
+/* line 363, ../sass/style.scss */
+.small {
+  width: 100%;
+}
+
+/* line 366, ../sass/style.scss */
+.table-date {
+  font-size: 1.3em;
+  font-family: "Josefin Sans", sans-serif;
+  font-weight: 700;
+  color: #ed7c98;
+  border: 1px solid #ed7c98;
+  text-align: center;
+}
+
 /*********************************************************/
 /*Controll jquery class*/
 /*********************************************************/
-/* line 366, ../sass/style.scss */
+/* line 378, ../sass/style.scss */
 .hide {
   display: none;
 }

@@ -14,7 +14,7 @@ function cutText(place,words){
 	});
 }
 
-cutText(".js-list-text p", 30);
+cutText(".js-list-text p", 50);
 
 //to hide the image of the table(CMS)
 function hideImg(image,target){
@@ -25,7 +25,7 @@ function hideImg(image,target){
 }
 
 
-if( $(".js-list-text img").length > 1){
+if( $(".js-list-text img").length > 0){
 		$(".js-list-text img").addClass('hide');
 		//$(".js-list-text img").first().removeClass('hide');							
 	}

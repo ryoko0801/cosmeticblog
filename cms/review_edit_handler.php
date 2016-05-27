@@ -7,18 +7,23 @@ include("partial/cmsheader.php");
 
 
 if(isset($_POST['updateSubmit'])) {
-
-
+ 	$newImg = $_POST['current'];
  	//connect to the datbase
 	$conn = database_conn();
 	//call the function to insert the thumbnail image
 	uploadImages("../images/thumb/");
 
+	if( isset($_FILES['image']['name']) && empty($_FILES['image']['error'])){
+		$newImg = $_FILES['image']['name'];
+		//echo"HEllo";
+		//var_dump($_POST);
+		//var_dump($_FILES['image']);
+	}
 	$id = $_POST['id'];
 	$subcategory = mysqli_real_escape_string($conn, $_POST['subcategory']);
 	$title = mysqli_real_escape_string($conn, $_POST['title']);
 	$contents = mysqli_real_escape_string($conn, $_POST['contents']);
-	$image =mysqli_real_escape_string($conn, $_FILES['image']['name']);
+	$image =mysqli_real_escape_string($conn,$newImg);
 	$tag = mysqli_real_escape_string($conn,$_POST['tag']);
 	//$category = mysqli_real_escape_string($conn, $_POST['category']);
 	$date =  date("Y-m-d H:i:s");	
@@ -33,11 +38,9 @@ if(isset($_POST['updateSubmit'])) {
 		echo $conn->error;
 		exit; }
 
-		//echo "<script> location.replace('reviewpage_list.php'); </script>";
+	echo "<script> location.replace('reviewpage_list.php'); </script>";
 	}/*end of update*/
-
 	mysqli_close($conn);
-
 	?>
 
 

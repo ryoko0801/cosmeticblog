@@ -8,13 +8,13 @@
 <ul id="cmsmenu" class="vertical menu " data-responsive-menu="drilldown medium-dropdown">
   <li><a href="#">Review page</a>
   	<ul class="vertical menu">
-      <li><a href="#">New Post</a></li>
+      <li><a href="newpost.php?category=review">New Post</a></li>
       <li><a href="reviewpage_list.php">List of the posts</a></li>
     </ul>
   </li>
   <li><a href="#">Trend page</a>
   	<ul class="vertical menu">
-      <li><a href="#">New Post</a></li>
+      <li><a href="newpost.php?category=trend">New Post</a></li>
       <li><a href="#">List of the posts</a></li>
     </ul>
   </li>
