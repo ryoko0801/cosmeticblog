@@ -69,7 +69,7 @@ mysqli_close($conn);
 	<!-- include the menu -->
 	<?php include("partial/cmsmenu.php");?>
 	<div class="large-9 columns">
-		<h2>Edit Review page</h2>
+		<h2>Edit <?php echo $category;?> page</h2>
 		<p>You can update or deleate previous post from this page.<br>If you want to update or delete previous posts, press "DELETE" or "UPDATE" buttons beside of each post. If you want to Post new blog, select the New Post from the menu.</p>
 		<div class="mar-top">
 			<table>
