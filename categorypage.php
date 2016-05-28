@@ -7,7 +7,14 @@ $conn = database_conn();
 $subcategoryMenu="";
 $singlePost="";
 if($_GET["category"] == "reviews"){
-	$query = "SELECT * FROM review_table ORDER BY id DESC";
+	if(isset($_GET['subcategory']))$query = "SELECT * FROM review_table WHERE subcategory='".$_GET['subcategory']."' ORDER BY id DESC";
+	else $query = "SELECT * FROM review_table ORDER BY id DESC";
+	
+	$subcategoryMenu.="<li><a href='categorypage.php?category=reviews&subcategory=eyemakeup'>Eye Makeup</a></li>
+	<li><a href='categorypage.php?category=reviews&subcategory=basemakeup'>Base Makeup</a></li>
+	<li><a href='categorypage.php?category=reviews&subcategory=skincare'>Skin care</a></li>
+	<li><a href='categorypage.php?category=reviews&subcategory=perfume'>Perfume</a></li>
+	<li><a href='categorypage.php?category=reviews&subcategory=makeuptool'>Tools</a></li>";
 }else if($_GET["category"] == "trend"){
 	$query = "SELECT * FROM trend_table ORDER BY id DESC";
 }
@@ -28,7 +35,6 @@ if( $numberOfRows > 0 ){
 		$tag = $row["tag"];
 		$category = $row["category"];
 	
-		$subcategoryMenu.="<li><a href='postpage.php?category=".$subcategory."'>".$subcategory."</a></li>";
 		$singlePost.="<div class='large-6 columns margin-post article'>
 								<div class='points'>
 									<div class='image'><img src='./images/thumb/".$image."'><span class='point-ribbon point-ribbon-l'>".$subcategory."</span></div>
@@ -52,7 +58,7 @@ if( $numberOfRows > 0 ){
 					<div class ="bottom-line center margin-menu-btm">
 						<div id="sub-nav" class ="top-nav">
 							<ul class="">
-								<li><a href="#list">New</a></li>
+								<li><a href="categorypage.php?category=<?php echo $_GET["category"];?>">New</a></li>
 								<?php echo $subcategoryMenu; ?>
 							</ul>
 						</div>
