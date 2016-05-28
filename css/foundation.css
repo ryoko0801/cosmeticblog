@@ -2315,7 +2315,7 @@ body {
   margin-bottom: 1rem;
   display: block; }
   .media-object img {
-    max-width: none; }
+    max-width: 100%; }
   @media screen and (max-width: 39.9375em) {
     .media-object.stack-for-small .media-object-section {
       padding: 0;

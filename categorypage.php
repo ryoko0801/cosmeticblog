@@ -6,17 +6,24 @@ include("partials/function.php");?>
 $conn = database_conn();
 $subcategoryMenu="";
 $singlePost="";
+$sideBar="";
+
 if($_GET["category"] == "reviews"){
 	if(isset($_GET['subcategory']))$query = "SELECT * FROM review_table WHERE subcategory='".$_GET['subcategory']."' ORDER BY id DESC";
-	else $query = "SELECT * FROM review_table ORDER BY id DESC";
+	else $query = "SELECT * FROM review_table ORDER BY id DESC LIMIT 6";
 	
-	$subcategoryMenu.="<li><a href='categorypage.php?category=reviews&subcategory=eyemakeup'>Eye Makeup</a></li>
-	<li><a href='categorypage.php?category=reviews&subcategory=basemakeup'>Base Makeup</a></li>
-	<li><a href='categorypage.php?category=reviews&subcategory=skincare'>Skin care</a></li>
-	<li><a href='categorypage.php?category=reviews&subcategory=perfume'>Perfume</a></li>
-	<li><a href='categorypage.php?category=reviews&subcategory=makeuptool'>Tools</a></li>";
+	$subcategoryMenu.="<li><a href='categorypage.php?category=reviews&subcategory=eyemakeup#list'>Eye Makeup</a></li>
+	<li><a href='categorypage.php?category=reviews&subcategory=basemakeup#list'>Base Makeup</a></li>
+	<li><a href='categorypage.php?category=reviews&subcategory=skincare#list'>Skin care</a></li>
+	<li><a href='categorypage.php?category=reviews&subcategory=perfume#list'>Perfume</a></li>
+	<li><a href='categorypage.php?category=reviews&subcategory=makeuptool#list'>Tools</a></li>";
 }else if($_GET["category"] == "trend"){
-	$query = "SELECT * FROM trend_table ORDER BY id DESC";
+	if(isset($_GET['subcategory']))$query = "SELECT * FROM trend_table WHERE subcategory='".$_GET['subcategory']."' ORDER BY id DESC";
+	else $query = "SELECT * FROM trend_table ORDER BY id DESC LIMIT 6 ";
+	$subcategoryMenu.="<li><a href='categorypage.php?category=trend&subcategory=hairstyle#list'>Hair Style</a></li>
+	<li><a href='categorypage.php?category=trend&subcategory=makeup#list'>Trend Makeup</a></li>
+	<li><a href='categorypage.php?category=trend&subcategory=nail#list'>Nail Art</a></li>
+	<li><a href='categorypage.php?category=trend&subcategory=fasion#list'>Fasion</a></li>";
 }
 //grub the data from database depend on the category
 $queryResult = mysqli_query( $conn, $query );
@@ -35,7 +42,7 @@ if( $numberOfRows > 0 ){
 		$tag = $row["tag"];
 		$category = $row["category"];
 	
-		$singlePost.="<div class='large-6 columns margin-post article'>
+			$singlePost.="<div class='large-6 columns margin-post article'>
 								<div class='points'>
 									<div class='image'><img src='./images/thumb/".$image."'><span class='point-ribbon point-ribbon-l'>".$subcategory."</span></div>
 								</div>
@@ -43,6 +50,17 @@ if( $numberOfRows > 0 ){
 								<span class='js-short-text'>".$contents."</span>
 								<a class='button more right' href='blog.php?id=".$id."'>Read More</a>
 						</div>";
+
+			$sideBar .="<div class='media-object'>
+						<div class='media-object-section sideimg'>
+							<img class='thumbnail' src='./images/thumb/".$image."'>
+						</div>
+						<div class='media-object-section title'>	
+						<a class='' href='blog.php?id=".$id."'><h5 class='js-short-title-side'>".$title."</h5>
+						</a>
+						<a class='button more right' href='blog.php?id=".$id."'>Read More</a>
+						</div>
+					</div>";
 		}//end of while
 			var_dump($singlePost);
 	}
@@ -58,7 +76,7 @@ if( $numberOfRows > 0 ){
 					<div class ="bottom-line center margin-menu-btm">
 						<div id="sub-nav" class ="top-nav">
 							<ul class="">
-								<li><a href="categorypage.php?category=<?php echo $_GET["category"];?>">New</a></li>
+								<li><a href="categorypage.php?category=<?php echo $_GET["category"];?>#list">New</a></li>
 								<?php echo $subcategoryMenu; ?>
 							</ul>
 						</div>
@@ -69,26 +87,15 @@ if( $numberOfRows > 0 ){
 					</div><!-- end of large8 section-->
 
 			<!-- side bar -->
-			<div class="large-4  medium-4 columns">
+			<div class="large-4  medium-4 columns side">
 				<div class ="bottom-line center margin-menu-btm">
 					<h4>Popular Posts</h4>
 				</div>
 				<div class="row column section-margin-top">
-
-					<div class="media-object">
-						<div class="media-object-section">
-							<img class="thumbnail" src="http://placehold.it/100">
-						</div>
-						<div class="media-object-section">
-							<h5>All I need is a space suit and I'm ready to go.</h5>
-						</div>
-					</div>
-
-
-
+					<?php echo $sideBar;?>
 				</div>
 			</div><!--    end of side-->
-		</div>
+		</div><!-- end of top row -->
 
 
 		<!-- end side bar -->

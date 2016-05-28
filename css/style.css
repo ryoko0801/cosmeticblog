@@ -86,8 +86,8 @@ h3 {
 /* line 70, ../sass/style.scss */
 h4 {
   font-family: "Limelight", cursive;
-  font-size: 2.5em;
-  color: #43454a;
+  font-size: 2.3em;
+  color: black;
   margin-top: 0.3em;
 }
 
@@ -229,15 +229,13 @@ h5 {
 /* line 172, ../sass/style.scss */
 .top-nav li a {
   font-family: "Limelight", cursive;
-  font-size: 2em;
+  font-size: 1.8em;
   color: black;
-  margin: 1.2em;
-  padding: 0.5em;
+  margin: 1em;
 }
 /* line 181, ../sass/style.scss */
 .top-nav li a:hover {
   color: #ed7c98;
-  padding: 0.5em;
 }
 
 /* line 190, ../sass/style.scss */
@@ -452,26 +450,41 @@ i:hover {
 }
 
 /*********************************************************/
-/*contact*/
+/*SIDE*/
 /*********************************************************/
+/* line 366, ../sass/style.scss */
+.media-object-section.sideimg {
+  width: 35%;
+}
+
+/* line 367, ../sass/style.scss */
+.media-object-section.title {
+  width: 65%;
+}
+
+/* line 368, ../sass/style.scss */
+.side {
+  padding-left: 3em;
+}
+
 /*********************************************************/
 /*Cms*/
 /*********************************************************/
 /*LOGIN*/
-/* line 378, ../sass/style.scss */
+/* line 375, ../sass/style.scss */
 .login_container {
   background-color: #ffcac2;
   padding: 5em 0em;
   margin-top: 12em;
 }
-/* line 382, ../sass/style.scss */
+/* line 379, ../sass/style.scss */
 .login_container p {
   font-size: 5em;
   font-family: "Limelight", cursive;
   color: #ed7c98;
 }
 
-/* line 389, ../sass/style.scss */
+/* line 386, ../sass/style.scss */
 .cms-back {
   background-image: url("../images/cms/back.jpg");
   background-repeat: no-repeat;
@@ -479,24 +492,24 @@ i:hover {
   background-size: cover;
 }
 
-/* line 399, ../sass/style.scss */
+/* line 396, ../sass/style.scss */
 .cms-nav li {
   padding: 2em 0em;
   background-color: #ffcac2;
 }
-/* line 402, ../sass/style.scss */
+/* line 399, ../sass/style.scss */
 .cms-nav li a {
   font-family: "Limelight", cursive;
   font-size: 2em;
   color: black;
   padding: 0.3em;
 }
-/* line 409, ../sass/style.scss */
+/* line 406, ../sass/style.scss */
 .cms-nav li a:hover {
   color: #ed7c98;
 }
 
-/* line 415, ../sass/style.scss */
+/* line 412, ../sass/style.scss */
 th {
   background-color: #ed7c98;
   color: white;
@@ -506,53 +519,53 @@ th {
   font-size: 1.5em;
 }
 
-/* line 423, ../sass/style.scss */
+/* line 420, ../sass/style.scss */
 td {
   border: 1px solid;
 }
 
-/* line 426, ../sass/style.scss */
+/* line 423, ../sass/style.scss */
 td:nth-child(2) {
   width: 10%;
 }
 
-/* line 427, ../sass/style.scss */
+/* line 424, ../sass/style.scss */
 td:nth-child(3) {
   width: 20%;
 }
 
-/* line 428, ../sass/style.scss */
+/* line 425, ../sass/style.scss */
 td:nth-child(4) {
   width: 40%;
 }
 
-/* line 429, ../sass/style.scss */
+/* line 426, ../sass/style.scss */
 td:nth-child(5) {
   width: 15%;
 }
 
-/* line 430, ../sass/style.scss */
+/* line 427, ../sass/style.scss */
 td:nth-child(6) {
   width: 15%;
 }
 
-/* line 431, ../sass/style.scss */
+/* line 428, ../sass/style.scss */
 td:nth-child(7) {
   width: 10%;
 }
 
-/* line 432, ../sass/style.scss */
+/* line 429, ../sass/style.scss */
 .list {
   font-family: "Prata", serif;
   font-size: 1.6em;
 }
 
-/* line 436, ../sass/style.scss */
+/* line 433, ../sass/style.scss */
 .small {
   width: 100%;
 }
 
-/* line 439, ../sass/style.scss */
+/* line 436, ../sass/style.scss */
 .table-date {
   font-size: 1.3em;
   font-family: "Josefin Sans", sans-serif;
@@ -565,7 +578,7 @@ td:nth-child(7) {
 /*********************************************************/
 /*Controll jquery class*/
 /*********************************************************/
-/* line 451, ../sass/style.scss */
+/* line 448, ../sass/style.scss */
 .hide {
   display: none;
 }

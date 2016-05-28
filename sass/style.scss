@@ -72,7 +72,7 @@
 			family:$menu;
 			size: $h4_size;
 		}
-		color: $body;
+		color: black;
 		margin-top: 0.3em;
 	}
 	
@@ -173,14 +173,14 @@
 
 			font:{ 
 				family: $menu;
-				size: 2em;
+				size: 1.8em;
 			}
 			color: black;
-			margin: 1.2em;
-			padding:0.5em;
+			margin: 1em;
+			//padding:0.3em;
 			&:hover{
 				color: $primary;
-				padding:0.5em;
+				//padding:0.3em;
 			}
 		}
 
@@ -361,14 +361,11 @@ i{
 
 
 /*********************************************************/
-			/*contact*/
+			/*SIDE*/
 /*********************************************************/
-
-
-
-
-
-
+.media-object-section.sideimg{width: 35%;}
+.media-object-section.title{ width: 65%;}
+.side{ padding-left: 3em;}
 
 
 /*********************************************************/

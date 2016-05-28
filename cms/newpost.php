@@ -23,8 +23,8 @@ if(isset($_GET["category"])){
 			$subcategoryOption .="<select name='subcategory' required>
 					<option value='hairstyle'>Hair style</option>
 					<option value='makeup'>Trend Makeup</option>
-					<option value='skincare'>Nail art</option>
-					<option value='perfume'>Fasion</option>
+					<option value='nail'>Nail art</option>
+					<option value='fasion'>Fasion</option>
 				</select>" ;
 		}//end of else if
 	}
