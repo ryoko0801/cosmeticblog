@@ -14,6 +14,9 @@ and open the template in the editor.
 ================================*/
 /* margin for each page top  */
 /* margin for each page bottom */
+/* ==============================
+	  custom function
+================================*/
 /* =====================================================================
     style
 ========================================================================== */
@@ -23,7 +26,7 @@ and open the template in the editor.
 /*********************************************************/
 /*login*/
 /*********************************************************/
-/* line 15, ../sass/cmsstyle.scss */
+/* line 16, ../sass/cmsstyle.scss */
 .cms-back {
   background-image: url("../images/event/back-event.jpg");
   background-repeat: no-repeat;
@@ -36,13 +39,13 @@ and open the template in the editor.
   height: 100vh;
 }
 
-/* line 29, ../sass/cmsstyle.scss */
+/* line 30, ../sass/cmsstyle.scss */
 .white {
   color: white;
 }
 
 /* Styles for signup panels */
-/* line 38, ../sass/cmsstyle.scss */
+/* line 39, ../sass/cmsstyle.scss */
 .center.row {
   height: 300px;
   margin-left: auto;
@@ -50,23 +53,23 @@ and open the template in the editor.
   max-width: 500px;
 }
 
-/* line 48, ../sass/cmsstyle.scss */
+/* line 49, ../sass/cmsstyle.scss */
 form input, form span {
   height: 50px;
 }
-/* line 51, ../sass/cmsstyle.scss */
+/* line 52, ../sass/cmsstyle.scss */
 form [type="submit"] {
   text-align: center;
   font-size: 1.9em;
   padding: 0em 1em 0em 1em;
 }
 
-/* line 58, ../sass/cmsstyle.scss */
+/* line 59, ../sass/cmsstyle.scss */
 .button {
   margin-left: 35%;
 }
 
-/* line 62, ../sass/cmsstyle.scss */
+/* line 63, ../sass/cmsstyle.scss */
 .login-col {
   padding-top: 75px !important;
   padding-bottom: 75px;
@@ -74,19 +77,19 @@ form [type="submit"] {
   background-color: rgba(0, 0, 0, 0.7);
 }
 
-/* line 69, ../sass/cmsstyle.scss */
+/* line 70, ../sass/cmsstyle.scss */
 .loginbtn {
   position: relative;
   left: -3.5em;
 }
 
-/* line 74, ../sass/cmsstyle.scss */
+/* line 75, ../sass/cmsstyle.scss */
 .login-logo {
   width: 60%;
   margin-bottom: 6em;
 }
 
-/* line 78, ../sass/cmsstyle.scss */
+/* line 79, ../sass/cmsstyle.scss */
 .login-mark {
   width: 17%;
   margin-bottom: 6em;
@@ -96,7 +99,7 @@ form [type="submit"] {
 /* ==============================
 	   cms page admin page
 	================================*/
-/* line 89, ../sass/cmsstyle.scss */
+/* line 90, ../sass/cmsstyle.scss */
 .logout-btn {
   color: #ed7c98;
   font-size: 2.5em;
@@ -105,23 +108,23 @@ form [type="submit"] {
   margin-bottom: 1em;
 }
 
-/* line 98, ../sass/cmsstyle.scss */
+/* line 99, ../sass/cmsstyle.scss */
 .admn-link {
   padding: 1.5em;
   background-color: #ed7c98;
   color: white;
 }
-/* line 104, ../sass/cmsstyle.scss */
+/* line 105, ../sass/cmsstyle.scss */
 .admn-link p {
   font-size: 1.8em;
   margin: auto;
 }
-/* line 108, ../sass/cmsstyle.scss */
+/* line 109, ../sass/cmsstyle.scss */
 .admn-link h2 {
   font-size: 2.5em;
 }
 
-/* line 113, ../sass/cmsstyle.scss */
+/* line 114, ../sass/cmsstyle.scss */
 .cms-btn {
   width: 30%;
   margin: 0 auto;
@@ -131,22 +134,22 @@ form [type="submit"] {
   /* ==============================
 	   cms page new post  page
 	================================*/
-/* line 130, ../sass/cmsstyle.scss */
+/* line 131, ../sass/cmsstyle.scss */
 .cms-post textarea {
   height: 10em;
   font-size: 1.8em;
 }
-/* line 134, ../sass/cmsstyle.scss */
+/* line 135, ../sass/cmsstyle.scss */
 .cms-post img {
   width: 60%;
 }
-/* line 137, ../sass/cmsstyle.scss */
+/* line 138, ../sass/cmsstyle.scss */
 .cms-post [type="submit"] {
   font-size: 1.9em;
   padding: 0.2em 1em 0.2em 1em;
   margin-top: 1em;
 }
-/* line 142, ../sass/cmsstyle.scss */
+/* line 143, ../sass/cmsstyle.scss */
 .cms-post button {
   width: 7em;
   background-color: grey;
@@ -155,7 +158,11 @@ form [type="submit"] {
   border: 1px solid white;
 }
 
-/* line 150, ../sass/cmsstyle.scss */
+/* line 151, ../sass/cmsstyle.scss */
 [type="file"] {
   font-size: 1.9em;
 }
+
+ 	/* ==============================
+	    rweview table
+	================================*/

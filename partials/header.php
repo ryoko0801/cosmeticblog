@@ -4,11 +4,11 @@
   <meta charset="utf-8">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Foundation for Sites</title>
+  <title>Cosmeticblog</title>
   <link rel="stylesheet" href="css/foundation.css">
   <link rel="stylesheet" href="css/style.css">
   <!-- google font -->
-  <link href='https://fonts.googleapis.com/css?family=Josefin+Slab:400,600,700|Prata|Limelight' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Josefin+Slab:400,700|Josefin+Sans:400,700,600|Limelight|Prata' rel='stylesheet' type='text/css'>
   <!-- font awesome -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
 </head>
@@ -44,8 +44,8 @@
      <div class ="bottom-line">
       <ul class="">
       <li><a href="#">What’s New</a></li>
-        <li><a href="reviews.php">Reviews</a></li>    
-        <li><a href="trend.php">Trend</a></li>         
+        <li><a href="categorypage.php?category=reviews">Reviews</a></li>    
+        <li><a href="categorypage.php?category=trend">Trend</a></li>         
         <li><a href="about.php">About</a></li>         
         <li><a href="contact.php">Contact</a></li>
       </ul>
@@ -53,5 +53,4 @@
     </div>
   </div>
 </div>
-
 <!-- nd of nav -->   
