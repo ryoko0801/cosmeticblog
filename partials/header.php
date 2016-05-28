@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="css/foundation.css">
   <link rel="stylesheet" href="css/style.css">
   <!-- google font -->
-  <link href='https://fonts.googleapis.com/css?family=Josefin+Slab:400,700|Josefin+Sans:400,700,600|Limelight|Prata' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Josefin+Sans:400,700,600|Josefin+Slab:400,600,700|Prata|Limelight' rel='stylesheet' type='text/css'>
   <!-- font awesome -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
 </head>
@@ -41,11 +41,11 @@
       <div class="title-bar-title">Menu</div>
     </div>
     <div id="main-nav" class ="top-nav">
-     <div class ="bottom-line">
+     <div class ="bottom-line margin-menu-top">
       <ul class="">
       <li><a href="#">What’s New</a></li>
         <li><a href="categorypage.php?category=reviews">Reviews</a></li>    
-        <li><a href="categorypage.php?category=trend">Trend</a></li>         
+        <li><a href="categorypage.php?category=trend">Trend</a></li>       
         <li><a href="about.php">About</a></li>         
         <li><a href="contact.php">Contact</a></li>
       </ul>

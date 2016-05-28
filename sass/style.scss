@@ -60,14 +60,14 @@
 		color: $primary;
 	}
 
-		h3{
+	h3{
 		font:{
 			family:$headding;
 			size: $h3_size;
 		}
 		color: $primary;
 	}
-			h4{
+	h4{
 		font:{
 			family:$menu;
 			size: $h4_size;
@@ -77,7 +77,7 @@
 	}
 	
 
-		h5{
+	h5{
 		font:{
 			family:$headding;
 			size: $h5_size;
@@ -104,9 +104,11 @@
 .margin-bottom{
 	margin-bottom:6em;
 }  
-
-.title-margin{
-	margin: 2.5em 0em  0em 0em; 
+.margin-menu-top{
+	margin-bottom: 2.5em;
+}
+.margin-menu-btm{
+	margin-top: 2.5em;
 }
 
 .white{color: white;}
@@ -156,38 +158,36 @@
 		margin:0 auto;
 		padding: 1em;
 	}
-		//position: absolute;
-		min-height: 13em;
-		li{ 
-			display:table-cell;
-			float: left;
-			@media all and (max-width: 550px){
-				float: none;
-			}
-			a{
-
-				font:{ 
-					family: $menu;
-					size: 2em;
-				}
-				color: black;
-				margin: 1.2em;
-				padding:0.5em;
-				&:hover{
-					color: $primary;
-					padding:0.5em;
-				}
-			}
-
+	li{ 
+		display:table-cell;
+		float: left;
+		@media all and (max-width: 550px){
+			float: none;
 		}
-	}
+		a{
 
-	.logo{
-		width: 8em;
-		position: absolute;
-		top: 13px;
-		left: 200px;
+			font:{ 
+				family: $menu;
+				size: 2em;
+			}
+			color: black;
+			margin: 1.2em;
+			padding:0.5em;
+			&:hover{
+				color: $primary;
+				padding:0.5em;
+			}
+		}
+
 	}
+}
+
+.logo{
+	width: 8em;
+	position: absolute;
+	top: 13px;
+	left: 200px;
+}
 
 /*********************************************************/
 			/*HERO AREA*/
@@ -221,7 +221,77 @@ display:block;
 /*********************************************************/
 			/*category*/
 /*********************************************************/
-
+//to set the category tag on the image(figure)
+/* .list-img-tag{
+	position: relative;
+	figcaption{
+		position: absolute;
+		bottom: 11em;
+		color: #fff;
+		background: $gategoty;
+		p{
+			font-family: $sans;
+			font-size: $tag;
+			margin: 0.2em 0;
+			font-weight: $semi;
+			text-align: center;
+			padding: 0 1.2em;
+			color: white;
+		}
+	}
+} */
+.points > div {
+ display: inline-block;
+ width: 200px;
+ margin-right: 15px;
+ vertical-align: top;
+}
+.points p {
+ margin: 1em 0;
+}
+/* 共通 */
+.points .image {
+ position: relative;
+}
+/* ⑤⑥ribbon */
+.point-ribbon {
+ position: absolute;
+ background: #FF797D;
+ font-size: 12px;
+ color: #fff;
+}
+.point-ribbon:before {
+ position: absolute;
+ content: " ";
+ height: 0;
+ width: 0;
+}
+.point-ribbon:after {
+ position: absolute;
+ content: " ";
+ height: 0;
+ width: 0;
+}
+/* ⑤ribbon-l */
+.point-ribbon-l {
+ top: .5em;
+ left: -6px;
+ height: 1.5em;
+ line-height: 1.5;
+ padding-left: .5em;
+}
+.point-ribbon-l:before {
+ left: 0;
+ top: 100%;
+ border-top:6px solid #C83539;
+ border-left:6px solid transparent;
+}
+.point-ribbon-l:after {
+ left: 100%;
+ bottom: 0;
+ border:.8em solid #FF797D;
+ border-right:.7em solid transparent;
+}
 
 /*********************************************************/
 			/*footer*/
@@ -301,27 +371,27 @@ i{
 			/*Cms*/
 /*********************************************************/
 	/*LOGIN*/
-.login_container{
-	background-color: #ffcac2;
-    padding: 5em 0em;
-    margin-top: 12em;
-    p{
-    	font-size: 5em;
-    	font-family: $menu;
-    	color: $primary;
-    }
-}
-
-.cms-back{
-	background:{
-		image: url('../images/cms/back.jpg');
-		repeat: no-repeat;
-		attachment: fixed;
-		size: cover; 
+	.login_container{
+		background-color: #ffcac2;
+		padding: 5em 0em;
+		margin-top: 12em;
+		p{
+			font-size: 5em;
+			font-family: $menu;
+			color: $primary;
+		}
 	}
-}
 
-.cms-nav{
+	.cms-back{
+		background:{
+			image: url('../images/cms/back.jpg');
+			repeat: no-repeat;
+			attachment: fixed;
+			size: cover; 
+		}
+	}
+
+	.cms-nav{
 		li{ 
 			padding: 2em 0em ;
 			background-color: #ffcac2;
@@ -343,8 +413,8 @@ i{
 		color: white;
 		border:solid 1px black;
 		text-align:center;
-		  font-family:$menu;
-		  font-size: 1.5em;
+		font-family:$menu;
+		font-size: 1.5em;
 	}
 	td{
 		border: 1px solid;
