@@ -64,17 +64,4 @@ if(isset($_GET["category"])){
 			</div>
 		</div><!-- end of columns -->
 	</div><!-- end of row -->
-
-
-
-
-
-
-
-
-
-
-
-
-
 <?php include("partial/cmsfooter.php");
