@@ -47,46 +47,19 @@ if( $numberOfRows > 0 ){
 						</div>
 					</div>
 					<div class="row">
-						<div class="large-6 columns list-img-tag">
-							<div class="">
-								<img src="http://placehold.it/400x300">
-								<h4>tagsaaddf</h4>
+						<div class="large-6 columns margin-post article">
 								<div class="points">
-								<div>
-									<div class="image"><img src="http://placehold.it/400x300"><span class="point-ribbon point-ribbon-l">NEW</span></div>
-								
-									</div>
+									<div class="image"><img src="http://placehold.it/400x300"><span class="point-ribbon point-ribbon-l">NEWaa  a</span></div>
 								</div>
-
-							</div>
+								<h3>Title</h3>
+								<p>test test tetst fguydfhf hfdjcfd st fguydfhf hfdjcf</p>
+								<a class="button more" href='blog-page.php?id=".$id."'>Read More</a>
 						</div>
 						</div>
 					</div><!-- end of large8 section-->
 
 
-					figcaption{
-					position: absolute;
-					bottom: 11em;
-					color: #fff;
-					background: $gategoty;
-					p{
-					font-family: $sans;
-					font-size: $tag;
-					margin: 0.2em 0;
-					font-weight: $semi;
-					text-align: center;
-					padding: 0 1.2em;
-					color: white;
-				}
-			}
-			h1 {
-			position: relative;
-			height: 50px;
-			line-height: 50px;
-			padding: 0 1em;
-			background-color: #f0f0f0;
-
-
+					
 
 
 			<!-- side bar -->

@@ -13,13 +13,13 @@
        		<div class="medium-6 large-6 columns">
 
        			<div class="foot-bar right">
-       				<ul class="">
+       				<ul class="right">
        					<ul class="foot-nav-item">
-                    <li><a href="#">What’s New</a></li>
-                    <li><a href="categorypage.php?category=reviews">Reviews</a></li>    
-                    <li><a href="categorypage.php?category=trend">Trend</a></li>         
-                    <li><a href="about.php">About</a></li>         
-                    <li><a href="contact.php">Contact</a></li>
+                    <li class="left"><a href="#">What’s New</a></li>
+                    <li class="left"><a href="categorypage.php?category=reviews">Reviews</a></li>    
+                    <li class="left"><a href="categorypage.php?category=trend">Trend</a></li>         
+                    <li class="left"><a href="about.php">About</a></li>         
+                    <li class="left"><a href="contact.php">Contact</a></li>
                 </ul>
               </ul>
 
