@@ -4,10 +4,13 @@
 
 
 <body>
+<div class="row columns">
+    <img src="http://placehold.it/1200x400">
+  </div>
   <div class="row">
     <!-- new post -->
     <div class="large-8  medium-8 columns ">
-      <div class ="bottom-line center">
+      <div class ="bottom-line center margin-menu-btm">
        <h4>New Post</h4>
      </div>
    </div>
@@ -15,7 +18,7 @@
 
    <!-- side bar -->
    <div class="large-4  medium-4 columns">
-    <div class ="bottom-line center ">
+    <div class ="bottom-line center margin-menu-btm">
      <h4>Popular Posts</h4>
    </div>
    <div class="row column section-margin-top">

@@ -60,14 +60,14 @@
 		color: $primary;
 	}
 
-		h3{
+	h3{
 		font:{
 			family:$headding;
 			size: $h3_size;
 		}
 		color: $primary;
 	}
-			h4{
+	h4{
 		font:{
 			family:$menu;
 			size: $h4_size;
@@ -77,7 +77,7 @@
 	}
 	
 
-		h5{
+	h5{
 		font:{
 			family:$headding;
 			size: $h5_size;
@@ -104,9 +104,14 @@
 .margin-bottom{
 	margin-bottom:6em;
 }  
-
-.title-margin{
-	margin: 2.5em 0em  0em 0em; 
+.margin-menu-top{
+	margin-bottom: 2.5em;
+}
+.margin-menu-btm{
+	margin-top: 2.5em;
+}
+.margin-post{
+	margin-top: 2em;
 }
 
 .white{color: white;}
@@ -136,6 +141,8 @@
 }
 
 
+
+
 /*********************************************************/
 			/*header Navigation*/
 /*********************************************************/
@@ -156,38 +163,36 @@
 		margin:0 auto;
 		padding: 1em;
 	}
-		//position: absolute;
-		min-height: 13em;
-		li{ 
-			display:table-cell;
-			float: left;
-			@media all and (max-width: 550px){
-				float: none;
-			}
-			a{
-
-				font:{ 
-					family: $menu;
-					size: 2em;
-				}
-				color: black;
-				margin: 1.2em;
-				padding:0.5em;
-				&:hover{
-					color: $primary;
-					padding:0.5em;
-				}
-			}
-
+	li{ 
+		display:table-cell;
+		float: left;
+		@media all and (max-width: 550px){
+			float: none;
 		}
-	}
+		a{
 
-	.logo{
-		width: 8em;
-		position: absolute;
-		top: 13px;
-		left: 200px;
+			font:{ 
+				family: $menu;
+				size: 2em;
+			}
+			color: black;
+			margin: 1.2em;
+			padding:0.5em;
+			&:hover{
+				color: $primary;
+				padding:0.5em;
+			}
+		}
+
 	}
+}
+
+.logo{
+	width: 8em;
+	position: absolute;
+	top: 13px;
+	left: 200px;
+}
 
 /*********************************************************/
 			/*HERO AREA*/
@@ -221,6 +226,74 @@ display:block;
 /*********************************************************/
 			/*category*/
 /*********************************************************/
+/* TAG for image */
+.points > div {
+	display: inline-block;
+	width: 100%;
+	margin-right: 15px;
+	vertical-align: top;
+}
+.points p {
+	margin: 1em 0;
+}
+.points .image {
+	position: relative;
+}
+/* ⑤⑥ribbon */
+.point-ribbon {
+	position: absolute;
+	background: #FF797D;
+	font-size: 1.9em;
+	font-family:$sans;
+	font-weight: $bold;
+	color: #fff;
+}
+.point-ribbon:before {
+	position: absolute;
+	content: " ";
+	height: 0;
+	width: 0;
+}
+.point-ribbon:after {
+	position: absolute;
+	content: " ";
+	height: 0;
+	width: 0;
+}
+/* ⑤ribbon-l */
+.point-ribbon-l {
+	top: 0.7em;
+	left: -12px;
+	height: 1.8em;
+	line-height: 1.7;
+	padding-left: 1.8em;
+	padding-right: 1.2em;
+}
+.point-ribbon-l:before {
+	left: 0;
+	top: 100%;
+	border-top:.7em solid #C83539;
+	border-left:.7em solid transparent;
+}
+.point-ribbon-l:after {
+	left: 100%;
+	border: .9em solid #FF797D;
+	border-right:.7em solid transparent;
+}
+.article {
+	h3{margin: 0em;}
+	img{margin-bottom: 1em;}
+	p{ margin: 0em 0em 0.5em 0em;}
+}
+
+.button.more {
+	font-size: 1.5em;
+	font-family:$sans;
+	font-weight: $bold;
+	color: white;
+	padding: 0.4em 1em;
+}
+
 
 
 /*********************************************************/
@@ -231,6 +304,7 @@ display:block;
 .footer-back{
 	background-color: black;
 	padding-top: 3em;
+	margin-top: 5em;
 }
 
 .foot-nav{
@@ -301,27 +375,27 @@ i{
 			/*Cms*/
 /*********************************************************/
 	/*LOGIN*/
-.login_container{
-	background-color: #ffcac2;
-    padding: 5em 0em;
-    margin-top: 12em;
-    p{
-    	font-size: 5em;
-    	font-family: $menu;
-    	color: $primary;
-    }
-}
-
-.cms-back{
-	background:{
-		image: url('../images/cms/back.jpg');
-		repeat: no-repeat;
-		attachment: fixed;
-		size: cover; 
+	.login_container{
+		background-color: #ffcac2;
+		padding: 5em 0em;
+		margin-top: 12em;
+		p{
+			font-size: 5em;
+			font-family: $menu;
+			color: $primary;
+		}
 	}
-}
 
-.cms-nav{
+	.cms-back{
+		background:{
+			image: url('../images/cms/back.jpg');
+			repeat: no-repeat;
+			attachment: fixed;
+			size: cover; 
+		}
+	}
+
+	.cms-nav{
 		li{ 
 			padding: 2em 0em ;
 			background-color: #ffcac2;
@@ -343,8 +417,8 @@ i{
 		color: white;
 		border:solid 1px black;
 		text-align:center;
-		  font-family:$menu;
-		  font-size: 1.5em;
+		font-family:$menu;
+		font-size: 1.5em;
 	}
 	td{
 		border: 1px solid;
