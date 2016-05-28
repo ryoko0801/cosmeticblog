@@ -13,22 +13,23 @@ function cutText(place,words){
 		}
 	});
 }
-
+//
 cutText(".js-list-text p", 50);
+cutText(".js-short-title", 30);
+cutText(".js-short-text p", 100);
 
-//to hide the image of the table(CMS)
-function hideImg(image,target){
-	if( $(image).length > 1){
-		$(target).addClass('hide');
-		$(image).first().removeClass('hide');
+
+//to hide the image of the post for the list of the post, new post etc..
+function hideImg($target){
+	if( $target.length > 0){
+		$target.addClass('hide');
 			}
 }
+//to hide the image of the list of the blog post
+hideImg($(".js-list-text img"));
+hideImg($(".js-short-text img"));
 
 
-if( $(".js-list-text img").length > 0){
-		$(".js-list-text img").addClass('hide');
-		//$(".js-list-text img").first().removeClass('hide');							
-	}
 
 //console.log($("#content3  img").length);
 //hideImg(".js-list-text img");

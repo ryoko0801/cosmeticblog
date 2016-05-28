@@ -229,7 +229,7 @@ display:block;
 /* TAG for image */
 .points > div {
 	display: inline-block;
-	width: 95%;
+	width: 100%;
 	margin-right: 15px;
 	vertical-align: top;
 }
@@ -243,7 +243,7 @@ display:block;
 .point-ribbon {
 	position: absolute;
 	background: #FF797D;
-	font-size: 1.7em;
+	font-size: 1.9em;
 	font-family:$sans;
 	font-weight: $bold;
 	color: #fff;
@@ -262,11 +262,12 @@ display:block;
 }
 /* ⑤ribbon-l */
 .point-ribbon-l {
-	top: 0.5em;
+	top: 0.7em;
 	left: -12px;
-	height: 1.78em;
+	height: 1.8em;
 	line-height: 1.7;
-	padding-left: .5em;
+	padding-left: 1.8em;
+	padding-right: 1.2em;
 }
 .point-ribbon-l:before {
 	left: 0;
@@ -276,7 +277,6 @@ display:block;
 }
 .point-ribbon-l:after {
 	left: 100%;
-	bottom: -0.0em;
 	border: .9em solid #FF797D;
 	border-right:.7em solid transparent;
 }
