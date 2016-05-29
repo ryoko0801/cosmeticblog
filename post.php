@@ -30,7 +30,7 @@ $queryRecomendResult = mysqli_query( $conn, $queryRecomend );
 $numberOfRowsRecom = mysqli_num_rows( $queryRecomendResult );
 
 if( $numberOfRows > 0 ){
-		while( $row = mysqli_fetch_assoc($queryResult)){
+		while( $row = mysqli_fetch_assoc($queryPostResult)){
 		$subcategory = $row["subcategory"];
 		$title = $row["title"];
 		$date = $row["posted_date"];

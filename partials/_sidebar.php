@@ -1,4 +1,5 @@
 <?php //sidebar
+$sideBar="";
 $querySideResult = mysqli_query( $conn, $querySide );
 $numberOfRowsSide = mysqli_num_rows( $querySideResult );
 
@@ -16,7 +17,7 @@ if( $numberOfRowsSide > 0 ){
 					<div class='media-object-section title'>	
 					<a class='' href='blog.php?id=".$id."'><h5 class='js-short-title-side'>".$title."</h5>
 					</a>
-					<a class='button more right side' href='blog.php?category=".$category."&id=".$id."'>Read</a>
+					<a class='button more right side' href='post.php?category=".$category."&id=".$id."'>Read</a>
 					</div>
 				</div>";
 	}

@@ -6,7 +6,7 @@ include("partials/function.php");?>
 $conn = database_conn();
 $subcategoryMenu="";
 $singlePost="";
-$sideBar="";
+
 
 if($_GET["category"] == "reviews"){
 	//for side bar (select the article randomly)
@@ -53,6 +53,7 @@ if( $numberOfRows > 0 ){
 						<div class='image'><img src='./images/thumb/".$image."'><span class='point-ribbon point-ribbon-l'>".$subcategory."</span></div>
 					</div>
 					<h3 class='js-short-title'>".$title."</h3>
+					<span class='table-date'>".$date."</span>
 					<span class='js-short-text'>".$contents."</span>
 					<a class='button more right' href='blog.php?id=".$id."'>Read More</a>
 			`		</div>";
