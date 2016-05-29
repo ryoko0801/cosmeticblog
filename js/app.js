@@ -16,6 +16,7 @@ function cutText(place,words){
 //
 cutText(".js-list-text p", 50);
 cutText(".js-short-title", 30);
+cutText(".js-short-title-side", 50);
 cutText(".js-short-text p", 100);
 
 
