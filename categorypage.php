@@ -9,15 +9,18 @@ $singlePost="";
 $sideBar="";
 
 if($_GET["category"] == "reviews"){
+	//for side bar (select the article randomly)
+	$querySide =  "SELECT * FROM review_table ORDER BY RAND() LIMIT 4";
 	if(isset($_GET['subcategory']))$query = "SELECT * FROM review_table WHERE subcategory='".$_GET['subcategory']."' ORDER BY id DESC";
 	else $query = "SELECT * FROM review_table ORDER BY id DESC LIMIT 6";
-	
 	$subcategoryMenu.="<li><a href='categorypage.php?category=reviews&subcategory=eyemakeup#list'>Eye Makeup</a></li>
 	<li><a href='categorypage.php?category=reviews&subcategory=basemakeup#list'>Base Makeup</a></li>
 	<li><a href='categorypage.php?category=reviews&subcategory=skincare#list'>Skin care</a></li>
 	<li><a href='categorypage.php?category=reviews&subcategory=perfume#list'>Perfume</a></li>
 	<li><a href='categorypage.php?category=reviews&subcategory=makeuptool#list'>Tools</a></li>";
 }else if($_GET["category"] == "trend"){
+	//for side bar (select the article randomly)
+	$querySide =  "SELECT * FROM trend_table ORDER BY RAND() LIMIT 4";
 	if(isset($_GET['subcategory']))$query = "SELECT * FROM trend_table WHERE subcategory='".$_GET['subcategory']."' ORDER BY id DESC";
 	else $query = "SELECT * FROM trend_table ORDER BY id DESC LIMIT 6 ";
 	$subcategoryMenu.="<li><a href='categorypage.php?category=trend&subcategory=hairstyle#list'>Hair Style</a></li>
@@ -25,14 +28,17 @@ if($_GET["category"] == "reviews"){
 	<li><a href='categorypage.php?category=trend&subcategory=nail#list'>Nail Art</a></li>
 	<li><a href='categorypage.php?category=trend&subcategory=fasion#list'>Fasion</a></li>";
 }
+
+//include side bar
+include("partials/_sidebar.php");
+
+
 //grub the data from database depend on the category
 $queryResult = mysqli_query( $conn, $query );
-
-if($queryResult == false){ echo $conn->error; exit; }
- //$query = "SELECT * FROM gallery WHERE hair_type = $_POST[hair_type]";
 $numberOfRows = mysqli_num_rows( $queryResult );
+
 if( $numberOfRows > 0 ){
-	while( $row = mysqli_fetch_assoc($queryResult)){
+		while( $row = mysqli_fetch_assoc($queryResult)){
 		$id = $row["id"];
 		$subcategory = $row["subcategory"];
 		$title = $row["title"];
@@ -42,28 +48,17 @@ if( $numberOfRows > 0 ){
 		$tag = $row["tag"];
 		$category = $row["category"];
 	
-			$singlePost.="<div class='large-6 columns margin-post article'>
-								<div class='points'>
-									<div class='image'><img src='./images/thumb/".$image."'><span class='point-ribbon point-ribbon-l'>".$subcategory."</span></div>
-								</div>
-								<h3 class='js-short-title'>".$title."</h3>
-								<span class='js-short-text'>".$contents."</span>
-								<a class='button more right' href='blog.php?id=".$id."'>Read More</a>
-						</div>";
-
-			$sideBar .="<div class='media-object'>
-						<div class='media-object-section sideimg'>
-							<img class='thumbnail' src='./images/thumb/".$image."'>
-						</div>
-						<div class='media-object-section title'>	
-						<a class='' href='blog.php?id=".$id."'><h5 class='js-short-title-side'>".$title."</h5>
-						</a>
-						<a class='button more right' href='blog.php?id=".$id."'>Read More</a>
-						</div>
-					</div>";
-		}//end of while
-			var_dump($singlePost);
-	}
+		$singlePost.="<div class='large-6 columns margin-post article'>
+					<div class='points'>
+						<div class='image'><img src='./images/thumb/".$image."'><span class='point-ribbon point-ribbon-l'>".$subcategory."</span></div>
+					</div>
+					<h3 class='js-short-title'>".$title."</h3>
+					<span class='js-short-text'>".$contents."</span>
+					<a class='button more right' href='blog.php?id=".$id."'>Read More</a>
+			`		</div>";
+		}
+	}//end of while
+	var_dump($numberOfRowsSide);
 	mysqli_close($conn);
 ;?>
 		<body>
@@ -82,10 +77,9 @@ if( $numberOfRows > 0 ){
 						</div>
 					</div>
 					<div id="list" class="row">
-						<?php echo $singlePost;?>
+						<?php if($singlePost) echo $singlePost; else echo"<p>There is no matched POST now.</p>";?>
 						</div>
 					</div><!-- end of large8 section-->
-
 			<!-- side bar -->
 			<div class="large-4  medium-4 columns side">
 				<div class ="bottom-line center margin-menu-btm">
@@ -96,25 +90,5 @@ if( $numberOfRows > 0 ){
 				</div>
 			</div><!--    end of side-->
 		</div><!-- end of top row -->
-
-
 		<!-- end side bar -->
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-		<?php include("partials/footer.php"); ?>
+		<?php include("partials/footer.php"); 

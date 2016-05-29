@@ -463,6 +463,11 @@ i:hover {
 }
 
 /* line 368, ../sass/style.scss */
+.button.more.right.side {
+  width: 4em;
+}
+
+/* line 369, ../sass/style.scss */
 .side {
   padding-left: 3em;
 }
@@ -471,20 +476,20 @@ i:hover {
 /*Cms*/
 /*********************************************************/
 /*LOGIN*/
-/* line 375, ../sass/style.scss */
+/* line 376, ../sass/style.scss */
 .login_container {
   background-color: #ffcac2;
   padding: 5em 0em;
   margin-top: 12em;
 }
-/* line 379, ../sass/style.scss */
+/* line 380, ../sass/style.scss */
 .login_container p {
   font-size: 5em;
   font-family: "Limelight", cursive;
   color: #ed7c98;
 }
 
-/* line 386, ../sass/style.scss */
+/* line 387, ../sass/style.scss */
 .cms-back {
   background-image: url("../images/cms/back.jpg");
   background-repeat: no-repeat;
@@ -492,24 +497,24 @@ i:hover {
   background-size: cover;
 }
 
-/* line 396, ../sass/style.scss */
+/* line 397, ../sass/style.scss */
 .cms-nav li {
   padding: 2em 0em;
   background-color: #ffcac2;
 }
-/* line 399, ../sass/style.scss */
+/* line 400, ../sass/style.scss */
 .cms-nav li a {
   font-family: "Limelight", cursive;
   font-size: 2em;
   color: black;
   padding: 0.3em;
 }
-/* line 406, ../sass/style.scss */
+/* line 407, ../sass/style.scss */
 .cms-nav li a:hover {
   color: #ed7c98;
 }
 
-/* line 412, ../sass/style.scss */
+/* line 413, ../sass/style.scss */
 th {
   background-color: #ed7c98;
   color: white;
@@ -519,53 +524,53 @@ th {
   font-size: 1.5em;
 }
 
-/* line 420, ../sass/style.scss */
+/* line 421, ../sass/style.scss */
 td {
   border: 1px solid;
 }
 
-/* line 423, ../sass/style.scss */
+/* line 424, ../sass/style.scss */
 td:nth-child(2) {
   width: 10%;
 }
 
-/* line 424, ../sass/style.scss */
+/* line 425, ../sass/style.scss */
 td:nth-child(3) {
   width: 20%;
 }
 
-/* line 425, ../sass/style.scss */
+/* line 426, ../sass/style.scss */
 td:nth-child(4) {
   width: 40%;
 }
 
-/* line 426, ../sass/style.scss */
+/* line 427, ../sass/style.scss */
 td:nth-child(5) {
   width: 15%;
 }
 
-/* line 427, ../sass/style.scss */
+/* line 428, ../sass/style.scss */
 td:nth-child(6) {
   width: 15%;
 }
 
-/* line 428, ../sass/style.scss */
+/* line 429, ../sass/style.scss */
 td:nth-child(7) {
   width: 10%;
 }
 
-/* line 429, ../sass/style.scss */
+/* line 430, ../sass/style.scss */
 .list {
   font-family: "Prata", serif;
   font-size: 1.6em;
 }
 
-/* line 433, ../sass/style.scss */
+/* line 434, ../sass/style.scss */
 .small {
   width: 100%;
 }
 
-/* line 436, ../sass/style.scss */
+/* line 437, ../sass/style.scss */
 .table-date {
   font-size: 1.3em;
   font-family: "Josefin Sans", sans-serif;
@@ -578,7 +583,7 @@ td:nth-child(7) {
 /*********************************************************/
 /*Controll jquery class*/
 /*********************************************************/
-/* line 448, ../sass/style.scss */
+/* line 449, ../sass/style.scss */
 .hide {
   display: none;
 }

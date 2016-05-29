@@ -43,7 +43,7 @@
     <div id="main-nav" class ="top-nav">
      <div class ="bottom-line margin-menu-top">
       <ul class="">
-      <li><a href="#">What’s New</a></li>
+      <li><a href="index.php">What’s New</a></li>
         <li><a href="categorypage.php?category=reviews">Reviews</a></li>    
         <li><a href="categorypage.php?category=trend">Trend</a></li>       
         <li><a href="about.php">About</a></li>         
