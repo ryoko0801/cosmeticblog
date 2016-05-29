@@ -65,10 +65,9 @@ if( $numberOfRows > 0 ){
 			<div class="row column">
 				<h2>Title Of the post</h2>
 				<span class="day">Day</span>
-				<img src="http://placehold.it/1800x400">
 			</div>
 			<div class="row column">
-				<img src="http://placehold.it/1800x400">
+				<?php echo $contents;?>
 			</div>
 
 			
