@@ -17,8 +17,9 @@ if(isset($_POST["submit"])){
 	$image =mysqli_real_escape_string($conn,$_FILES['image']['name']);
 	$tag = mysqli_real_escape_string($conn,$_POST['tag']);
 	$category = mysqli_real_escape_string($conn, $_POST['category']);
-	$date =  date("Y-m-d H:i:s");
-	var_dump($category);
+	$day =  date_create();
+	$date = date_format($day," H:i  F jS Y");
+	var_dump($date);
 
 	if($_POST["category"] == "reviews"){
 		$sqlQuery = "INSERT INTO review_table(image, title, contents, subcategory, posted_date, tag, category)
@@ -31,11 +32,11 @@ if(isset($_POST["submit"])){
 	$resultInsert = mysqli_query($conn, $sqlQuery);
 	if($resultInsert == false){
 		echo $conn->error;
-		echo "Sorrry! There is a error with the post a New blog, Try again. <a href='newpost.php?category=".$category."'> </a>";
+		//echo "Sorrry! There is a error with the post a New blog, Try again. <a href='newpost.php?category=".$category."'> </a>";
 		exit;
 	}
 	else{
-		echo "<script> location.replace('reviewpage_list.php?category=".$category."'); </script>";
+		//echo "<script> location.replace('reviewpage_list.php?category=".$category."'); </script>";
 	}
 }
 //close the connection

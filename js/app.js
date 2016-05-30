@@ -18,6 +18,8 @@ cutText(".js-list-text p", 50);
 cutText(".js-short-title", 30);
 cutText(".js-short-title-side", 50);
 cutText(".js-short-text p", 100);
+cutText(".js-short-text-index p", 180);
+cutText(".js-short-title-index p", 70);
 
 
 //to hide the image of the post for the list of the post, new post etc..
@@ -29,14 +31,18 @@ function hideImg($target){
 //to hide the image of the list of the blog post
 hideImg($(".js-list-text img"));
 hideImg($(".js-short-text img"));
+hideImg($(".js-short-text-index img"));
+
+//to set the article sameheight in each row
+$(function() {
+    $('.article').matchHeight();
+     $('.article-reco').matchHeight();
+});
 
 
 
-//console.log($("#content3  img").length);
-//hideImg(".js-list-text img");
 
-//for(var i = 0; i < $(".js-list-text ").length; i++){
-//console.log($("#content"+i+" img").length);
+
 
 
 

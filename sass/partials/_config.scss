@@ -28,17 +28,20 @@ $head-mar:20em;
 	   fonts
 ================================*/
 // base config fonts
+// font config 
 
 //font type
-$mainFont: 'Josefin Slab', serif;
 $headding: 'Prata', serif;
+$mainFont: 'Josefin Slab', serif;
+$headline: 'Prata', serif;
 $menu: 'Limelight', cursive;
-
-
+$sans: 'Josefin Sans', sans-serif;
 
 //font weight
 $mainweight: 400;
 $bold: 700;
+$semi: 600;
+
 
 // base config fonts size
 //to make 1em to 10px
@@ -57,9 +60,9 @@ $h2_size: 4em;
 //h1 size
 $h3_size: 2.4em;
 //h4 size
-$h4_size: 2.3em;
+$h4_size: 1.8em;
 //h4 size
-$h5_size: 1.9em;
+$h5_size: 1.8em;
 //base text size
 $text-size: 1.6em;
 

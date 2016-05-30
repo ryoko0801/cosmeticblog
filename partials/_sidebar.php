@@ -21,4 +21,5 @@ if( $numberOfRowsSide > 0 ){
 					</div>
 				</div>";
 	}
+	return $sideBar;
 }
