@@ -1,186 +1,114 @@
-<?php include("partials/header.php"); ?>   
+<?php include("partials/header.php");
+include("partials/function.php");?>
 
+<?php
+//connect to database
+$conn = database_conn();
 
+$singlePost="";
+$singlePostTrend="";
 
+$reviewPostQuery = "SELECT * FROM review_table ORDER BY id DESC LIMIT 3 ";
+$trendPostQuery = "SELECT * FROM trend_table ORDER BY id DESC LIMIT 3 ";
+$querySide = "SELECT * FROM review_table ORDER BY RAND() LIMIT 4";
 
-<body>
-<div class="row columns">
-    <img src="http://placehold.it/1200x400">
-  </div>
-  <div class="row">
-    <!-- new post -->
-    <div class="large-8  medium-8 columns ">
-      <div class ="bottom-line center margin-menu-btm">
-       <h4>New Post</h4>
-     </div>
-   </div>
-   <!-- end new post -->
+include("partials/_sidebar.php");
+//grub the data from database depend on the category
+$trendQueryResult = mysqli_query( $conn, $trendPostQuery );
+$trendnumberOfRows = mysqli_num_rows( $trendQueryResult );
 
-   <!-- side bar -->
-   <div class="large-4  medium-4 columns">
-    <div class ="bottom-line center margin-menu-btm">
-     <h4>Popular Posts</h4>
-   </div>
-   <div class="row column section-margin-top">
+//grub the data from database depend on the category
+$reviewQueryResult = mysqli_query( $conn, $reviewPostQuery );
+$reviewnumberOfRows = mysqli_num_rows( $reviewQueryResult );
 
-    <div class="media-object">
-      <div class="media-object-section">
-        <img class="thumbnail" src="http://placehold.it/100">
-      </div>
-      <div class="media-object-section">
-        <h5>All I need is a space suit and I'm ready to go.</h5>
-      </div>
-    </div>
-    <div class="media-object">
-      <div class="media-object-section">
-        <img class="thumbnail" src="http://placehold.it/100">
-      </div>
-      <div class="media-object-section">
-        <h5>Are the stars out tonight? I don't know if it's cloudy or bright.</h5>
-      </div>
-    </div>
-    <div class="media-object">
-      <div class="media-object-section">
-        <img class="thumbnail" src="http://placehold.it/100">
-      </div>
-      <div class="media-object-section">
-        <h5>And the world keeps spinning.</h5>
-      </div>
-    </div>
-    <div class="media-object">
-      <div class="media-object-section">
-        <img class="thumbnail" src="http://placehold.it/100">
-      </div>
-      <div class="media-object-section">
-        <h5>Cold hearted orb that rules the night.</h5>
-      </div>
-    </div>
-  </div>
-</div>
+if( $reviewnumberOfRows > 0 ){
+  while( $row = mysqli_fetch_assoc($reviewQueryResult)){
+    $id = $row["id"];
+    $subcategory = $row["subcategory"];
+    $title = $row["title"];
+    $date = $row["posted_date"];
+    $contents = $row["contents"];
+    $image = $row["image"];
+    $category = $row["category"];
 
-<!-- end side bar -->
-
-</div><!-- end row -->
-
-
-
-<div class="row">
-  <div class="large-8 medium-8 columns">
-    <h5>Here&rsquo;s your basic grid:</h5>
-    <!-- Grid Example -->
-
-    <div class="row">
-      <div class="large-12 columns">
-        <div class="primary callout">
-          <p><strong>This is a twelve column section in a row.</strong> Each of these includes a div.callout element so you can see where the columns are - it's not required at all for the grid.</p>
+    $singlePost.="<div class='row'>
+    <div class='large-4 columns margin-post article'>
+      <div class='points'>
+        <div class='image'><img src='./images/thumb/".$image."'><span class='point-ribbon point-ribbon-l'>".$subcategory."</span>
         </div>
       </div>
     </div>
-    <div class="row">
-      <div class="large-6 medium-6 columns">
-        <div class="primary callout">
-          <p>Six columns</p>
-        </div>
-      </div>
-      <div class="large-6 medium-6 columns">
-        <div class="primary callout">
-          <p>Six columns</p>
-        </div>
-      </div>
-    </div>
-    <div class="row">
-      <div class="large-4 medium-4 small-4 columns">
-        <div class="primary callout">
-          <p>Four columns</p>
-        </div>
-      </div>
-      <div class="large-4 medium-4 small-4 columns">
-        <div class="primary callout">
-          <p>Four columns</p>
-        </div>
-      </div>
-      <div class="large-4 medium-4 small-4 columns">
-        <div class="primary callout">
-          <p>Four columns</p>
-        </div>
-      </div>
-    </div>
+    <div class='large-8 columns margin-post'>
+      <h3 class='js-short-title-index'>".$title."</h3>
+      <span class='js-short-text-index'>".$contents."</span>
+      <a class='button more right' href='post.php?category=".$category."&id=".$id."'>Read More</a>
+      `   </div>
+    </div>";
+  }
+  }//end of while
+  if( $trendnumberOfRows > 0 ){
+    while( $row = mysqli_fetch_assoc($trendQueryResult)){
+      $id = $row["id"];
+      $subcategory = $row["subcategory"];
+      $title = $row["title"];
+      $date = $row["posted_date"];
+      $contents = $row["contents"];
+      $image = $row["image"];
+      $category = $row["category"];
 
-    <hr />
-
-    <h5>We bet you&rsquo;ll need a form somewhere:</h5>
-    <form>
-      <div class="row">
-        <div class="large-12 columns">
-          <label>Input Label</label>
-          <input type="text" placeholder="large-12.columns" />
-        </div>
-      </div>
-      <div class="row">
-        <div class="large-4 medium-4 columns">
-          <label>Input Label</label>
-          <input type="text" placeholder="large-4.columns" />
-        </div>
-        <div class="large-4 medium-4 columns">
-          <label>Input Label</label>
-          <input type="text" placeholder="large-4.columns" />
-        </div>
-        <div class="large-4 medium-4 columns">
-          <div class="row collapse">
-            <label>Input Label</label>
-            <div class="input-group">
-              <input type="text" placeholder="small-9.columns" class="input-group-field" />
-              <span class="input-group-label">.com</span>
-            </div>
+      $singlePostTrend.="<div class='row'>
+      <div class='large-4 columns margin-post article'>
+        <div class='points'>
+          <div class='image'><img src='./images/thumb/".$image."'><span class='point-ribbon point-ribbon-l'>".$subcategory."</span>
           </div>
         </div>
       </div>
-      <div class="row">
-        <div class="large-12 columns">
-          <label>Select Box</label>
-          <select>
-            <option value="husker">Husker</option>
-            <option value="starbuck">Starbuck</option>
-            <option value="hotdog">Hot Dog</option>
-            <option value="apollo">Apollo</option>
-          </select>
-        </div>
-      </div>
-      <div class="row">
-        <div class="large-6 medium-6 columns">
-          <label>Choose Your Favorite</label>
-          <input type="radio" name="pokemon" value="Red" id="pokemonRed"><label for="pokemonRed">Radio 1</label>
-          <input type="radio" name="pokemon" value="Blue" id="pokemonBlue"><label for="pokemonBlue">Radio 2</label>
-        </div>
-        <div class="large-6 medium-6 columns">
-          <label>Check these out</label>
-          <input id="checkbox1" type="checkbox"><label for="checkbox1">Checkbox 1</label>
-          <input id="checkbox2" type="checkbox"><label for="checkbox2">Checkbox 2</label>
-        </div>
-      </div>
-      <div class="row">
-        <div class="large-12 columns">
-          <label>Textarea Label</label>
-          <textarea placeholder="small-12.columns"></textarea>
-        </div>
-      </div>
-    </form>
-  </div>
+      <div class='large-8 columns margin-post'>
+        <h3 class='js-short-title-index'>".$title."</h3>
+        <span class='js-short-text-index'>".$contents."</span>
+        <a class='button more right' href='post.php?category=".$category."&id=".$id."'>Read More</a>
+        `   </div>
+      </div>";
+    }
+  }//end of while
+  ?>
 
-  <div class="large-4 medium-4 columns">
-    <h5>Try one of these buttons:</h5>
-    <p><a href="#" class="button">Simple Button</a><br/>
-      <a href="#" class="success button">Success Btn</a><br/>
-      <a href="#" class="alert button">Alert Btn</a><br/>
-      <a href="#" class="secondary button">Secondary Btn</a></p>
-      <div class="callout">
-        <h5>So many components, girl!</h5>
-        <p>A whole kitchen sink of goodies comes with Foundation. Check out the docs to see them all, along with details on making them your own.</p>
-        <a href="http://foundation.zurb.com/sites/docs/" class="small button">Go to Foundation Docs</a>
-      </div>
+
+  <body>
+    <div class="row columns">
+      <img src="http://placehold.it/1200x400">
     </div>
-  </div>
+    <div class="row">
+      <!-- new post -->
+      <div class="large-8  medium-8 columns ">
+        <div class ="bottom-line center margin-menu-btm">
+         <h4>New Post</h4>
+       </div>
+       <?php echo $singlePost;?>
+       <?php echo $singlePostTrend;?>
+     </div>
+     <!-- end new post -->
+
+     <!-- side bar -->
+     <div class="large-4  medium-4 columns side">
+      <div class ="bottom-line center margin-menu-btm">
+       <h4>Popular Posts</h4>
+     </div>
+     <div class="row column section-margin-top">
+     <?php echo $sideBar;?>
+   </div>
+   <!-- end side bar -->
+   <div class="row column section-margin-top">
+        <img src="images/sephora_ad.jpg"/>
+        <img src="images/nord_ad.png"/>
+        </div>
+   </div>
+ </div><!-- end row -->
 
 
 
-  <?php include("partials/footer.php"); ?>   
+
+
+
+
+ <?php include("partials/footer.php"); ?>   

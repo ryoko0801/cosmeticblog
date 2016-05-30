@@ -29,25 +29,33 @@ $numberOfRows = mysqli_num_rows( $queryPostResult);
 $queryRecomendResult = mysqli_query( $conn, $queryRecomend );
 $numberOfRowsRecom = mysqli_num_rows( $queryRecomendResult );
 
-if( $numberOfRows > 0 ){
-		while( $row = mysqli_fetch_assoc($queryResult)){
+if( $numberOfRows == 1){
+		while( $row = mysqli_fetch_assoc($queryPostResult)){
 		$subcategory = $row["subcategory"];
 		$title = $row["title"];
 		$date = $row["posted_date"];
 		$contents = $row["contents"];
 		$image = $row["image"];
 		$tag = $row["tag"];
-	
-		$singlePost.="<div class='large-12 columns margin-post article'>
-					<div class='points'>
-						<div class='image'><img src='./images/thumb/".$image."'><span class='point-ribbon point-ribbon-l'>".$subcategory."</span></div>
-					</div>
-					<h3 class='js-short-title'>".$title."</h3>
-					<span class='js-short-text'>".$contents."</span>
-					<a class='button more right' href='blog.php?id=".$id."'>Read More</a>
-			`		</div>";
 		}
 	}//end of while
+if( $numberOfRowsRecom > 0 ){
+		while( $row = mysqli_fetch_assoc($queryRecomendResult)){
+		$subcategoryR = $row["subcategory"];
+		$category = $row["category"];
+		$id = $row["id"];
+		$titleR = $row["title"];
+		$imageR = $row["image"];
+		//reccomend posts
+		$recommendedPost.= "<div class='large-3 medium-3 small-6 columns article-reco'>
+					<a href='post.php?category=".$category."&id=".$id."'>
+						<img src='./images/thumb/".$imageR."'>
+						<h5>".$titleR."</h5>
+					</a>
+				</div>";
+		}
+	}
+
 ?>
 
 
@@ -63,14 +71,20 @@ if( $numberOfRows > 0 ){
 		<!-- new post -->
 		<div class="large-8  medium-8 columns section-margin-top">
 			<div class="row column">
-				<h2>Title Of the post</h2>
-				<span class="day">Day</span>
-				<img src="http://placehold.it/1800x400">
+				<h2><?php echo $title;?></h2>
+				<div class="blog-day"><?php echo $date;?></div>
 			</div>
 			<div class="row column">
-				<img src="http://placehold.it/1800x400">
+				<?php echo $contents;?>
 			</div>
-
+			<!-- reccomended post -->
+			<div class ="bottom-line center margin-menu-btm">
+							<h4>You Might like this</h4>
+					</div>
+			<div class='row recom'>
+				<?php echo $recommendedPost; var_dump($recommendedPost);?>
+			</div>
+			<!-- end of recommended post list -->
 			
 			
 		</div><!-- end of large8 section-->
@@ -82,35 +96,11 @@ if( $numberOfRows > 0 ){
 			<div class="row column section-margin-top">
 				<?php echo $sideBar;?>
 			</div>
+			<div class="row column section-margin-top">
+				<img src="images/sephora_ad.jpg"/>
+				<img src="images/nord_ad.png"/>
+				</div>
 		</div><!--    end of side-->
 	</div><!-- end of top row -->
 	<!-- end side bar -->
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 	<?php include("partials/footer.php"); 

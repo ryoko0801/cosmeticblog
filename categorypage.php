@@ -6,7 +6,7 @@ include("partials/function.php");?>
 $conn = database_conn();
 $subcategoryMenu="";
 $singlePost="";
-$sideBar="";
+
 
 if($_GET["category"] == "reviews"){
 	//for side bar (select the article randomly)
@@ -26,7 +26,7 @@ if($_GET["category"] == "reviews"){
 	$subcategoryMenu.="<li><a href='categorypage.php?category=trend&subcategory=hairstyle#list'>Hair Style</a></li>
 	<li><a href='categorypage.php?category=trend&subcategory=makeup#list'>Trend Makeup</a></li>
 	<li><a href='categorypage.php?category=trend&subcategory=nail#list'>Nail Art</a></li>
-	<li><a href='categorypage.php?category=trend&subcategory=fasion#list'>Fasion</a></li>";
+	<li><a href='categorypage.php?category=trend&subcategory=fasion#list'>Fashion</a></li>";
 }
 
 //include side bar
@@ -53,8 +53,9 @@ if( $numberOfRows > 0 ){
 						<div class='image'><img src='./images/thumb/".$image."'><span class='point-ribbon point-ribbon-l'>".$subcategory."</span></div>
 					</div>
 					<h3 class='js-short-title'>".$title."</h3>
+					<div class='table-date list'>".$date."</div>
 					<span class='js-short-text'>".$contents."</span>
-					<a class='button more right' href='blog.php?id=".$id."'>Read More</a>
+					<a class='button more right' href='post.php?category=".$category."&id=".$id."'>Read More</a>
 			`		</div>";
 		}
 	}//end of while

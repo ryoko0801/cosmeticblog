@@ -51,6 +51,8 @@
      <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
 
      <script src="js/vendor/foundation.js"></script>
+      <script src="js/jquery.matchHeight.js" type="text/javascript"></script>
      <script src="js/app.js"></script>
+
    </body>
    </html>
