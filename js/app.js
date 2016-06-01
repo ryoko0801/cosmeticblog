@@ -1,4 +1,4 @@
-$(document).foundation()
+$(document).foundation();
 
 $(document).ready(function() {
 
@@ -39,23 +39,14 @@ $(function() {
 });
 
 
-//to make list of text limit
-/*var contents = $(".js-list-text p");
-if(contents.length > 1){
-	contents.each(function(){
-		$(this).addClass('hide');
-	});
-	$(".js-list-text p:eq(0)").addClass('show');
-}
+//to controll the comment length. when user click continue btn,
+//show all sentence
 
-*/
-
-
-
-
-
-
-
-
+$('.js-comment').readmore({
+	speed: 100,
+  	collapsedHeight: 58,
+  	moreLink: '<a href="#" class="more">Read More</a>',
+  	lessLink: '<a href="#" class="more">Close</a>'
+});
 
 });//end of on load
