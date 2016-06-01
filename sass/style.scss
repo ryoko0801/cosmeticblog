@@ -25,6 +25,20 @@
 		font-family: $mainFont;
 		color: $body;
 		line-height: 1.4;
+		background:{ image:url("../images/back.jpg");
+					size: cover;
+					repeat: no-repeat;
+					attachment: fixed;
+		}
+//back base white
+	.base-back{background:white(0.7);
+		width: 120em;
+		margin: 0 auto;
+		@media all and (max-width: 550px){
+			width: 90%;
+		}
+	}
+		
 	}
 	ul, li{
 		margin: 0;
@@ -91,6 +105,12 @@
 .section-margin-top{
 	margin-top:3em;
 	margin-bottom: 1em;
+}
+.comment-section-margin-top{
+	margin-top:4em;
+}
+.comment-mar{
+	margin-top:1.7em;
 }
 /*  margin top for */
 .margin-top{
@@ -318,11 +338,57 @@ display:block;
 	margin-top: 1.8em;
 }
 .blog-day{
-	font{
+	font:{
 		family: $sans;
-		size: 20em;
+		size: 2em;
+		weight: $bold;
 	}
+		padding: 0em 0.5em;
+		border: 1px solid ;
+		text-align: center;
+		width: 40%;
 }
+
+	.subbtn{
+			border: none;
+		
+			background-color: $primary;
+			color: #fff;
+			padding: 0.4em 3em;
+		}
+	input[type="submit"]{
+			font-family: $menu;
+	}
+
+/*comment*/
+.arrow_box {
+	position: relative;
+	background: #ffcac2;
+	padding: 1em 2em;
+	p{ font-size: 1.7em; margin-bottom: 0.3em;}
+	h4{font-size: 1.8em;}
+	.more{ 
+		color: #e75075; 
+		font:{family: $sans; size: 1.8em; weight: $bold;}
+	}
+	margin-left: 1.5em;
+}
+.arrow_box:after {
+	right: 100%;
+	top: 50%;
+	border: solid transparent;
+	content: " ";
+	height: 0;
+	width: 0;
+	position: absolute;
+	pointer-events: none;
+	border-color: rgba(255, 202, 194, 0);
+	border-right-color: #ffcac2;
+	border-width: 20px;
+	margin-top: -20px;
+}
+
+
 
 
 /*********************************************************/
@@ -484,4 +550,7 @@ i{
 /*********************************************************/
 .hide{
 	display: none;
+}
+.show{
+	display: block;
 }

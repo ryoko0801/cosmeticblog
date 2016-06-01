@@ -30,7 +30,10 @@ if( $numberOfRows > 0 ){
 		$id = $row["id"];
 		$subcategory = $row["subcategory"];
 		$title = $row["title"];
-		$date = $row["posted_date"];
+		$day = $row["posted_date"];
+		$date =  date_create($day);
+		$date = date_format($date," F jS Y");// H:i 
+		//var_dump($date);
 		$contents = $row["contents"];
 		$image = $row["image"];
 		$tag = $row["tag"];
@@ -50,8 +53,7 @@ if( $numberOfRows > 0 ){
 			</td>
 			<td id='content".$id."' class='js-list-text'>
 				<p class='table-date'>".$date."</p>
-				<h6>".$title."</h6>
-				".$contents."
+				<h6 class='js-list-title'>".$title."</h6>
 			</td>
 			<td class='list'>".$subcategory."</td>
 			<td class='list'>".$tag."</td>

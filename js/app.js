@@ -1,4 +1,4 @@
-$(document).foundation()
+$(document).foundation();
 
 $(document).ready(function() {
 
@@ -13,13 +13,15 @@ function cutText(place,words){
 		}
 	});
 }
-//
-cutText(".js-list-text p", 50);
+//list
+cutText(".js-list-title", 50);
 cutText(".js-short-title", 30);
 cutText(".js-short-title-side", 50);
 cutText(".js-short-text p", 100);
 cutText(".js-short-text-index p", 180);
 cutText(".js-short-title-index p", 70);
+
+
 
 
 //to hide the image of the post for the list of the post, new post etc..
@@ -29,7 +31,6 @@ function hideImg($target){
 			}
 }
 //to hide the image of the list of the blog post
-hideImg($(".js-list-text img"));
 hideImg($(".js-short-text img"));
 hideImg($(".js-short-text-index img"));
 
@@ -37,18 +38,18 @@ hideImg($(".js-short-text-index img"));
 $(function() {
     $('.article').matchHeight();
      $('.article-reco').matchHeight();
+      $('.js-com').matchHeight();
 });
 
 
+//to controll the comment length. when user click continue btn,
+//show all sentence
 
-
-
-
-
-
-
-
-
-
+$('.js-comment').readmore({
+	speed: 100,
+  	collapsedHeight: 58,
+  	moreLink: '<a href="#" class="more">Read More</a>',
+  	lessLink: '<a href="#" class="more">Close</a>'
+});
 
 });//end of on load
