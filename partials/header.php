@@ -4,8 +4,10 @@
   <meta charset="utf-8">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Cosmeticblog</title>
+  <title>Bearty Junky</title>
+  <!-- foundatiion css -->
   <link rel="stylesheet" href="css/foundation.css">
+    <!--  my style css -->
   <link rel="stylesheet" href="css/style.css">
   <!-- google font -->
   <link href='https://fonts.googleapis.com/css?family=Josefin+Sans:400,700,600|Josefin+Slab:400,600,700|Prata|Limelight' rel='stylesheet' type='text/css'>
@@ -13,6 +15,7 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
 </head>
 <body>
+<div class="base-back">
 
   <!-- navigation -->
   <div class ="row">
