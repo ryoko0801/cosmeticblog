@@ -13,8 +13,8 @@ function cutText(place,words){
 		}
 	});
 }
-//
-cutText(".js-list-text p", 50);
+//list
+cutText(".js-list-title", 50);
 cutText(".js-short-title", 30);
 cutText(".js-short-title-side", 50);
 cutText(".js-short-text p", 100);
@@ -29,7 +29,6 @@ function hideImg($target){
 			}
 }
 //to hide the image of the list of the blog post
-hideImg($(".js-list-text img"));
 hideImg($(".js-short-text img"));
 hideImg($(".js-short-text-index img"));
 
@@ -40,8 +39,16 @@ $(function() {
 });
 
 
+//to make list of text limit
+/*var contents = $(".js-list-text p");
+if(contents.length > 1){
+	contents.each(function(){
+		$(this).addClass('hide');
+	});
+	$(".js-list-text p:eq(0)").addClass('show');
+}
 
-
+*/
 
 
 

@@ -17,9 +17,9 @@ if(isset($_POST["submit"])){
 	$image =mysqli_real_escape_string($conn,$_FILES['image']['name']);
 	$tag = mysqli_real_escape_string($conn,$_POST['tag']);
 	$category = mysqli_real_escape_string($conn, $_POST['category']);
-	$day =  date_create();
-	$date = date_format($day," H:i  F jS Y");
-	var_dump($date);
+	$date =  date("Y-m-d");
+	//$date = date_format($day,"F jS Y");
+	//var_dump($day);
 
 	if($_POST["category"] == "reviews"){
 		$sqlQuery = "INSERT INTO review_table(image, title, contents, subcategory, posted_date, tag, category)

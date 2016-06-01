@@ -85,6 +85,22 @@ if( $numberOfRowsRecom > 0 ){
 				<?php echo $recommendedPost; var_dump($recommendedPost);?>
 			</div>
 			<!-- end of recommended post list -->
+			<!-- reccomended post -->
+			<div class ="bottom-line center margin-menu-btm">
+							<h4>Comments of this post</h4>
+					</div>
+			<div class="row column ">
+			<form  action="comment_handler.php" method="post">
+				<input type="hidden" name="blog_id" value="<?php echo $id ?>" />
+				<label><i class="fa fa-user margin-post" aria-hidden="true"></i> Name
+				<input type="text" name="username"></label>
+				<label><i class="fa fa-pencil" aria-hidden="true"></i> Title
+				<input type="text" name="title"></label>
+				<label><i class="fa fa-comments" aria-hidden="true"></i> Comments
+				<textarea rows="5" type="text" name="comments" placeholder="Any comments here"></textarea></label>
+			<input class="subbtn right" type="submit" value="Submit Comment"/>
+			</form>
+			</div>
 			
 			
 		</div><!-- end of large8 section-->
