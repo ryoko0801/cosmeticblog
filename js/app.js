@@ -22,6 +22,8 @@ cutText(".js-short-text-index p", 180);
 cutText(".js-short-title-index p", 70);
 
 
+
+
 //to hide the image of the post for the list of the post, new post etc..
 function hideImg($target){
 	if( $target.length > 0){
@@ -36,6 +38,7 @@ hideImg($(".js-short-text-index img"));
 $(function() {
     $('.article').matchHeight();
      $('.article-reco').matchHeight();
+      $('.js-com').matchHeight();
 });
 
 

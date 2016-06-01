@@ -30,10 +30,14 @@
 					repeat: no-repeat;
 					attachment: fixed;
 		}
-
+//back base white
 	.base-back{background:white(0.7);
 		width: 120em;
-		margin: 0 auto;}
+		margin: 0 auto;
+		@media all and (max-width: 550px){
+			width: 90%;
+		}
+	}
 		
 	}
 	ul, li{

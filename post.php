@@ -68,12 +68,18 @@ if( $numberOfRows == 1){
 			$nameComment = $row["username"];
 			$commentComment = $row["comments"];	
 		//comments for the post
-			$comment.= "<div class='large-3 medium-3 small-6 columns article-reco'>
-			<a href='post.php?category=".$category."&id=".$id."'>
-				<img src='./images/thumb/".$imageR."'>
-				<h5>".$titleR."</h5>
-			</a>
-		</div>";
+			$comment.= "<div class='row js-com comment-mar'>
+								<div class='large-2  medium-2 small-2 columns center'>
+									<img src= 'http://placehold.it/100x100' >
+									<p style='margin-bottom: 0em'>".$nameComment."</p>
+								</div>
+								<div class='large-10 medium-10 small-10 columns'>
+									<div class='arrow_box'>
+										<h4>".$titleComment."</h4>
+										<p class='js-comment'>".$commentComment ."</p>
+									</div>	
+								</div>
+								</div>";
 	}
 	}//end of recommend query 
 	
@@ -122,19 +128,7 @@ if( $numberOfRows == 1){
 								</form>
 							</div><!-- end of comment post form -->
 							<div class="comment-section-margin-top">
-							<div class="row comment-mar"><!-- list of comments -->
-								<div class="large-2  medium-2 small-2 columns center">
-									<img src= "http://placehold.it/100x100" style="margin-top: 1.5em">
-									<p>name</p>
-								</div>
-								<div class="large-10  medium-10 small-2 columns">
-									<div class="arrow_box">
-										<h4>Dreams feel real while we're in them.</h4>
-										<p class="js-comment">I'm going to improvise.Listen, there's something you should know about me... about inception. An idea is like a virus, resilient, highly contagious. The smallest seed can grow</p>
-									</div>	
-								</div>
-								</div>
-								
+								<?php echo $comment;?>
 							</div><!-- end of  list of comments -->
 
 
