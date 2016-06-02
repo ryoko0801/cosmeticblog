@@ -10,16 +10,15 @@ if( $numberOfRowsSide > 0 ){
 		$title = $row["title"];
 		$image = $row["image"];
 		$category = $row["category"];
-		$sideBar .="<div class='media-object'>
+		$sideBar .="<a href='post.php?category=".$category."&id=".$id."'>
+					<div class='media-object'>
 					<div class='media-object-section sideimg'>
 						<img class='thumbnail' src='./images/thumb/".$image."'>
 					</div>
 					<div class='media-object-section title'>	
-					<a class='' href='blog.php?id=".$id."'><h5 class='js-short-title-side'>".$title."</h5>
-					</a>
-					<a class='button more right side' href='post.php?category=".$category."&id=".$id."'>Read</a>
+			<h5 class='js-short-title-side'>".$title."</h5>
 					</div>
-				</div>";
+				</div></a>";
 	}
 	return $sideBar;
 }

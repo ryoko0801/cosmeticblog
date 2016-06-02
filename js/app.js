@@ -20,7 +20,8 @@ cutText(".js-short-title-side", 50);
 cutText(".js-short-text p", 100);
 cutText(".js-short-text-index p", 180);
 cutText(".js-short-title-index p", 70);
-
+//for recom title
+cutText(".js-short-reco-title", 25);
 
 
 

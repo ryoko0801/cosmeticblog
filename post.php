@@ -49,15 +49,17 @@ if( $numberOfRows == 1){
 	if( $numberOfRowsRecom > 0 ){
 		while( $row = mysqli_fetch_assoc($queryRecomendResult)){
 			$subcategoryR = $row["subcategory"];
-			$category = $row["category"];
-			$id = $row["id"];
+			$categoryR = $row["category"];
+			$idR = $row["id"];
 			$titleR = $row["title"];
 			$imageR = $row["image"];
 		//reccomend posts
 			$recommendedPost.= "<div class='large-3 medium-3 small-6 columns article-reco'>
-			<a href='post.php?category=".$category."&id=".$id."'>
+			<a href='post.php?category=".$categoryR."&id=".$idR."'>
 				<img src='./images/thumb/".$imageR."'>
-				<h5>".$titleR."</h5>
+				<h5 class='js-short-reco-title'>".$titleR."</h5>
+				<span class='button more side' >Read More
+			</span>
 			</a>
 		</div>";
 	}
@@ -113,12 +115,12 @@ if( $numberOfRows == 1){
 					<form  action="comment_handler.php" method="post">
 						<input type="hidden" name="blog_id" value="<?php echo  $_GET['id']; ?>" />
 						<input type="hidden" name="category" value="<?php echo $_GET['category'];?>" />
-						<label><i class="fa fa-user fa-2x margin-post" aria-hidden="true"></i><span class="com-area"> &nbsp;Name</span>
+						<label><i class="fa fa-user fa-s margin-post" aria-hidden="true"></i><span class="com-area"> &nbsp;Name</span>
 							<input type="text" name="username"></label>
-							<label><i class="fa fa-pencil fa-2x" aria-hidden="true"></i><span class="com-area"> &nbsp;Title</span>
+							<label><i class="fa fa-pencil fa-s" aria-hidden="true"></i><span class="com-area"> &nbsp;Title</span>
 								<input type="text" name="title"></label>
-								<label><i class="fa fa-comments fa-2x" aria-hidden="true"></i> <span class="com-area">&nbsp;Comments</span>
-									<textarea rows="5" type="text" name="comments" placeholder="Any comments here"></textarea></label>
+								<label><i class="fa fa-comments fa-s" aria-hidden="true"></i> <span class="com-area">&nbsp;Comments</span>
+									<textarea rows="4" type="text" name="comments" placeholder="Any comments here"></textarea></label>
 									<input class="subbtn right" type="submit" value="Submit Comment"/>
 								</form>
 							</div><!-- end of comment post form -->

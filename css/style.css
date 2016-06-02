@@ -609,73 +609,78 @@ input[type="submit"] {
   font-size: 1.4em;
 }
 
+/* line 422, ../sass/style.scss */
+i.fa-s {
+  font-size: 1.6em;
+}
+
 /*********************************************************/
 /*footer*/
 /*********************************************************/
 /*footer*/
-/* line 429, ../sass/style.scss */
+/* line 432, ../sass/style.scss */
 .footer-back {
   background-color: black;
   padding-top: 3em;
   margin-top: 5em;
 }
 
-/* line 435, ../sass/style.scss */
+/* line 438, ../sass/style.scss */
 .foot-nav {
   margin-bottom: 4em;
 }
-/* line 437, ../sass/style.scss */
+/* line 440, ../sass/style.scss */
 .foot-nav img {
   width: 60%;
   margin: 2em 0em 1em 0em;
 }
-/* line 441, ../sass/style.scss */
+/* line 444, ../sass/style.scss */
 .foot-nav p {
   color: white;
   margin: 0em;
   font-size: 1.8em;
 }
 
-/* line 447, ../sass/style.scss */
+/* line 450, ../sass/style.scss */
 .foot-bar {
   color: white;
   margin-right: 1.2em;
   padding: 1.8em;
 }
 
-/* line 453, ../sass/style.scss */
+/* line 456, ../sass/style.scss */
 .nav-icon
 i {
   margin: 0.2em;
 }
-/* line 456, ../sass/style.scss */
+/* line 459, ../sass/style.scss */
 .nav-icon
 i:hover {
   color: #ed7c98;
 }
 
-/* line 462, ../sass/style.scss */
+/* line 465, ../sass/style.scss */
 .foot-nav-item li {
   padding: 0.6em;
 }
-/* line 464, ../sass/style.scss */
+/* line 467, ../sass/style.scss */
 .foot-nav-item li a {
   color: white;
   font-family: "Limelight", cursive;
   font-size: 1.5em;
 }
-/* line 469, ../sass/style.scss */
+/* line 472, ../sass/style.scss */
 .foot-nav-item li a:hover {
   color: #ed7c98;
 }
 
 /*form for contact*/
-/* line 477, ../sass/style.scss */
+/* line 480, ../sass/style.scss */
 .contact-form textarea {
   height: 7em;
   margin-bottom: 2em;
 }
-/* line 479, ../sass/style.scss */
+/* line 482, ../sass/style.scss */
 .contact-form label {
   color: white;
   margin-top: 1em;
@@ -683,7 +688,7 @@ i:hover {
   font-size: 1.5em;
 }
 
-/* line 482, ../sass/style.scss */
+/* line 485, ../sass/style.scss */
 [type="submit"] {
   font-family: "Prata", serif;
   font-size: 1.8em;
@@ -692,22 +697,22 @@ i:hover {
 /*********************************************************/
 /*SIDE*/
 /*********************************************************/
-/* line 491, ../sass/style.scss */
+/* line 494, ../sass/style.scss */
 .media-object-section.sideimg {
   width: 35%;
 }
 
-/* line 492, ../sass/style.scss */
+/* line 495, ../sass/style.scss */
 .media-object-section.title {
   width: 65%;
 }
 
-/* line 493, ../sass/style.scss */
+/* line 496, ../sass/style.scss */
 .button.more.right.side {
   width: 4em;
 }
 
-/* line 494, ../sass/style.scss */
+/* line 497, ../sass/style.scss */
 .side {
   padding-left: 3em;
 }
@@ -716,20 +721,20 @@ i:hover {
 /*Cms*/
 /*********************************************************/
 /*LOGIN*/
-/* line 501, ../sass/style.scss */
+/* line 504, ../sass/style.scss */
 .login_container {
   background-color: #ffcac2;
   padding: 5em 0em;
   margin-top: 12em;
 }
-/* line 505, ../sass/style.scss */
+/* line 508, ../sass/style.scss */
 .login_container p {
   font-size: 5em;
   font-family: "Limelight", cursive;
   color: #ed7c98;
 }
 
-/* line 512, ../sass/style.scss */
+/* line 515, ../sass/style.scss */
 .cms-back {
   background-image: url("../images/cms/back.jpg");
   background-repeat: no-repeat;
@@ -737,24 +742,24 @@ i:hover {
   background-size: cover;
 }
 
-/* line 522, ../sass/style.scss */
+/* line 525, ../sass/style.scss */
 .cms-nav li {
   padding: 2em 0em;
   background-color: #ffcac2;
 }
-/* line 525, ../sass/style.scss */
+/* line 528, ../sass/style.scss */
 .cms-nav li a {
   font-family: "Limelight", cursive;
   font-size: 2em;
   color: black;
   padding: 0.3em;
 }
-/* line 532, ../sass/style.scss */
+/* line 535, ../sass/style.scss */
 .cms-nav li a:hover {
   color: #ed7c98;
 }
 
-/* line 538, ../sass/style.scss */
+/* line 541, ../sass/style.scss */
 th {
   background-color: #ed7c98;
   color: white;
@@ -764,53 +769,53 @@ th {
   font-size: 1.5em;
 }
 
-/* line 546, ../sass/style.scss */
+/* line 549, ../sass/style.scss */
 td {
   border: 1px solid;
 }
 
-/* line 549, ../sass/style.scss */
+/* line 552, ../sass/style.scss */
 td:nth-child(2) {
   width: 10%;
 }
 
-/* line 550, ../sass/style.scss */
+/* line 553, ../sass/style.scss */
 td:nth-child(3) {
   width: 20%;
 }
 
-/* line 551, ../sass/style.scss */
+/* line 554, ../sass/style.scss */
 td:nth-child(4) {
   width: 40%;
 }
 
-/* line 552, ../sass/style.scss */
+/* line 555, ../sass/style.scss */
 td:nth-child(5) {
   width: 15%;
 }
 
-/* line 553, ../sass/style.scss */
+/* line 556, ../sass/style.scss */
 td:nth-child(6) {
   width: 15%;
 }
 
-/* line 554, ../sass/style.scss */
+/* line 557, ../sass/style.scss */
 td:nth-child(7) {
   width: 10%;
 }
 
-/* line 555, ../sass/style.scss */
+/* line 558, ../sass/style.scss */
 .list {
   font-family: "Prata", serif;
   font-size: 1.6em;
 }
 
-/* line 559, ../sass/style.scss */
+/* line 562, ../sass/style.scss */
 .small {
   width: 100%;
 }
 
-/* line 562, ../sass/style.scss */
+/* line 565, ../sass/style.scss */
 .table-date {
   font-size: 1.3em;
   font-family: "Josefin Sans", sans-serif;
@@ -821,7 +826,7 @@ td:nth-child(7) {
   text-align: center;
 }
 
-/* line 571, ../sass/style.scss */
+/* line 574, ../sass/style.scss */
 .table-date.list {
   font-size: 1.6em;
   margin: 0.6em 0em;
@@ -831,12 +836,12 @@ td:nth-child(7) {
 /*********************************************************/
 /*Controll jquery class*/
 /*********************************************************/
-/* line 581, ../sass/style.scss */
+/* line 584, ../sass/style.scss */
 .hide {
   display: none;
 }
 
-/* line 584, ../sass/style.scss */
+/* line 587, ../sass/style.scss */
 .show {
   display: block;
 }
