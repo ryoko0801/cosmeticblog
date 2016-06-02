@@ -52,14 +52,13 @@ if( $numberOfRows > 0 ){
 					<div class='points'>
 						<div class='image'><img src='./images/thumb/".$image."'><span class='point-ribbon point-ribbon-l'>".$subcategory."</span></div>
 					</div>
-					<h3 class='js-short-title'>".$title."</h3>
-					<div class='table-date list'>".$date."</div>
+					<div class='ribbon-day '><p>".$date."</p></div>
+					<h3 class='js-short-title '>".$title."</h3>
 					<span class='js-short-text'>".$contents."</span>
 					<a class='button more right' href='post.php?category=".$category."&id=".$id."'>Read More</a>
 			`		</div>";
 		}
 	}//end of while
-	var_dump($numberOfRowsSide);
 	mysqli_close($conn);
 ;?>
 		<body>
@@ -70,8 +69,8 @@ if( $numberOfRows > 0 ){
 				<!-- new post -->
 				<div class="large-8  medium-8 columns ">
 					<div class ="bottom-line center margin-menu-btm">
-						<div id="sub-nav" class ="top-nav">
-							<ul class="">
+						<div id="sub-nav" class ="top-nav sub-menu">
+							<ul class="sub-menu">
 								<li><a href="categorypage.php?category=<?php echo $_GET["category"];?>#list">New</a></li>
 								<?php echo $subcategoryMenu; ?>
 							</ul>

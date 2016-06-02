@@ -26,80 +26,79 @@
 		color: $body;
 		line-height: 1.4;
 		background:{ image:url("../images/back.jpg");
-					size: cover;
-					repeat: no-repeat;
-					attachment: fixed;
+			size: cover;
+			repeat: no-repeat;
+			attachment: fixed;
 		}
 //back base white
-	.base-back{background:white(0.7);
-		width: 120em;
-		margin: 0 auto;
-		@media all and (max-width: 550px){
-			width: 90%;
-		}
-	}
-		
-	}
-	ul, li{
-		margin: 0;
-		padding: 0;
-	}
-	li{
-		list-style: none;
-	}
-	p{
-		font:{
-			size:$text;
-		}
-		font-family: $mainFont;
-		margin-top:0.5em;
-		color: $body;
+.base-back{background:white(0.7);
+	margin: 0 auto;
+		/* Large and up */
+		@media screen and (min-width: 64em) {width: 115em;}
+		/* Medium only */
+		@media screen and (min-width: 40em) and (max-width: 63.9375em) {width: 60em;}
+		/* Small only */
+		@media screen and (max-width: 39.9375em) {width: 39em;}
 	}
 
+}
+ul, li{
+	margin: 0;
+	padding: 0;
+}
+li{
+	list-style: none;
+}
+p{
+	font:{
+		size:$text;
+	}
+	font-family: $mainFont;
+	margin-top:0.5em;
+	color: $body;
+}
+h1{
+	font:{
+		family:$headding;
+		size: $h1_size;
+	}
+	color: $primary;
+	margin-bottom:0.2em; 
+}
+h2{
+	font:{
+		family:$headding;
+		size: $h2_size;
+	}
+	color: $primary;
+}
 
-	h1{
-		font:{
-			family:$headding;
-			size: $h1_size;
-		}
-		color: $primary;
-		margin-bottom:0.2em; 
+h3{
+	font:{
+		family:$headding;
+		size: $h3_size;
 	}
+	color: $primary;
+}
+h4{
+	font:{
+		family:$menu;
+		size: $h4_size;
+	}
+	color: black;
+	margin-top: 0.6em;
+}
 
-	h2{
-		font:{
-			family:$headding;
-			size: $h2_size;
-		}
-		color: $primary;
-	}
 
-	h3{
-		font:{
-			family:$headding;
-			size: $h3_size;
-		}
-		color: $primary;
+h5{
+	font:{
+		family:$headding;
+		size: $h5_size;
 	}
-	h4{
-		font:{
-			family:$menu;
-			size: $h4_size;
-		}
-		color: black;
-		margin-top: 0.6em;
-	}
-	
+	color: $primary;
+	margin-top: 0.3em;
+}
 
-	h5{
-		font:{
-			family:$headding;
-			size: $h5_size;
-		}
-		color: $primary;
-		margin-top: 0.3em;
-	}
-	
 /*handy*/
 /* margins for each section in the page */
 .section-margin-top{
@@ -167,42 +166,57 @@
 /*********************************************************/
 			/*header Navigation*/
 /*********************************************************/
-.logo{
-	position: absolute;
-	top: 22px;
-	left: 100px;
-	width: 20%;
-}
-.bottom-line{
-	border-bottom: 4px black double;
-	border-top: 4px black double;
-}
-.top-nav{
-	ul{
-
-		display:table;
-		margin:0 auto;
-		padding: 1em;
-	}
-	li{ 
-		display:table-cell;
-		float: left;
-		@media all and (max-width: 550px){
-			float: none;
-		}
-		a{
-
-			font:{ 
-				family: $menu;
-				size: 1.8em;
+.menu-small{
+	li{margin-bottom:0.5em;}
+	margin: 1.2em 0em;
+	a{
+		font:{family: $sans; size: 1.6em; weight: $semi;}
+		color: black;
+		&:hover{
+			color: $pdark;
+				//
 			}
-			color: black;
-			margin: 1em;
+		}	
+	}
+	.logo{
+		position: absolute;
+		top: 22px;
+		left: 100px;
+		width: 20%;
+	}
+	.bottom-line{
+		border-bottom: 4px black double;
+		border-top: 4px black double;
+	}
+	.top-nav{
+		ul{
+			display:table;
+			margin:0 auto;
+			padding: 1em;
+		}
+		li{ 
+			display:table-cell;
+			float: left;
+			@media all and (max-width: 550px){
+				float: none;
+			}
+			a{
+				font:{ 
+					family: $menu;
+					size: 1.8em;
+				}
+				color: black;
+				margin: 1em;
 			//padding:0.3em;
 			&:hover{
 				color: $primary;
-				//padding:0.3em;
 			}
+			/* Medium only */
+		@media screen and (min-width: 40em) and (max-width: 63.9375em) {font-size: 1.8em;
+				margin: 0.7em;
+		}
+		/* Small only */
+		@media screen and (max-width: 39.9375em) {font-size: 1.6em; margin: 0.6em;}
 		}
 
 	}
@@ -257,13 +271,25 @@ display:block;
 @keyframes heart-beats {
     to { transform: scale(1.1); }
 }  */
-	
+
 
 
 
 /*********************************************************/
 			/*category*/
 /*********************************************************/
+/*ribbon-day*/
+.ribbon-day { 
+p{	margin-bottom: 0em;
+	text-align: center;
+	font:{ size: 1.5em; family: $sans; weight: $semi;}
+}
+	background-color: $tagcol; position: relative; height: 2.4em; width: 21em; margin: auto; margin-top: 0.5em; margin-bottom: 1em;}
+
+.ribbon-day:before,
+.ribbon-day:after { content: ''; position: absolute; height:0; border: 12px solid transparent; top: 0; width: 0; border-top-color: $tagcol; border-bottom-color: $tagcol; z-index: 1; }
+.ribbon-day:before { left: -12px; }
+.ribbon-day:after { right: -12px; }
 /* TAG for image */
 .points > div {
 	display: inline-block;
@@ -319,7 +345,7 @@ display:block;
 	border-right:.7em solid transparent;
 }
 .article {
-	h3{margin: 0em;}
+	h3{margin: 0em 0em 0.3em 0em;}
 	img{margin-bottom: 1em;}
 	p{ margin: 0em 0em 0.5em 0em;}
 }
@@ -343,22 +369,22 @@ display:block;
 		size: 2em;
 		weight: $bold;
 	}
-		padding: 0em 0.5em;
-		border: 1px solid ;
-		text-align: center;
-		width: 40%;
+	padding: 0em 0.5em;
+	border: 1px solid ;
+	text-align: center;
+	width: 40%;
 }
 
-	.subbtn{
-			border: none;
-		
-			background-color: $primary;
-			color: #fff;
-			padding: 0.4em 3em;
-		}
-	input[type="submit"]{
-			font-family: $menu;
-	}
+.subbtn{
+	border: none;
+
+	background-color: $primary;
+	color: #fff;
+	padding: 0.4em 3em;
+}
+input[type="submit"]{
+	font-family: $menu;
+}
 
 /*comment*/
 .arrow_box {

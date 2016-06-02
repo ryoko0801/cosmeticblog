@@ -80,13 +80,8 @@ if( $numberOfRows == 1){
 									</div>	
 								</div>
 								</div>";
-	}
+		}
 	}//end of recommend query 
-	
-
-
-
-
 	?>
 	<body>
 		<div class="row columns">
@@ -130,8 +125,6 @@ if( $numberOfRows == 1){
 							<div class="comment-section-margin-top">
 								<?php echo $comment;?>
 							</div><!-- end of  list of comments -->
-
-
 						</div><!-- end of large8 section-->
 						<!-- side bar -->
 						<div class="large-4  medium-4 columns side">
@@ -148,6 +141,4 @@ if( $numberOfRows == 1){
 						</div><!--    end of side-->
 					</div><!-- end of top row -->
 					<!-- end side bar -->
-
-
 					<?php include("partials/footer.php"); 

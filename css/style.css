@@ -1,9 +1,4 @@
 @charset "UTF-8";
-/*
-To change this license header, choose License Headers in Project Properties.
-To change this template file, choose Tools | Templates
-and open the template in the editor.
-*/
 /* ==============================
 	  colour
 ================================*/
@@ -48,28 +43,42 @@ body {
 /* line 34, ../sass/style.scss */
 body .base-back {
   background: rgba(255, 255, 255, 0.7);
-  width: 120em;
   margin: 0 auto;
+  /* Large and up */
+  /* Medium only */
+  /* Small only */
 }
-@media all and (max-width: 550px) {
+@media screen and (min-width: 64em) {
   /* line 34, ../sass/style.scss */
   body .base-back {
-    width: 90%;
+    width: 115em;
+  }
+}
+@media screen and (min-width: 40em) and (max-width: 63.9375em) {
+  /* line 34, ../sass/style.scss */
+  body .base-back {
+    width: 60em;
+  }
+}
+@media screen and (max-width: 39.9375em) {
+  /* line 34, ../sass/style.scss */
+  body .base-back {
+    width: 39em;
   }
 }
 
-/* line 43, ../sass/style.scss */
+/* line 45, ../sass/style.scss */
 ul, li {
   margin: 0;
   padding: 0;
 }
 
-/* line 47, ../sass/style.scss */
+/* line 49, ../sass/style.scss */
 li {
   list-style: none;
 }
 
-/* line 50, ../sass/style.scss */
+/* line 52, ../sass/style.scss */
 p {
   font-size: 1.8em;
   font-family: "Josefin Slab", serif;
@@ -85,21 +94,21 @@ h1 {
   margin-bottom: 0.2em;
 }
 
-/* line 69, ../sass/style.scss */
+/* line 68, ../sass/style.scss */
 h2 {
   font-family: "Prata", serif;
   font-size: 4em;
   color: #ed7c98;
 }
 
-/* line 77, ../sass/style.scss */
+/* line 76, ../sass/style.scss */
 h3 {
   font-family: "Prata", serif;
   font-size: 2.4em;
   color: #ed7c98;
 }
 
-/* line 84, ../sass/style.scss */
+/* line 83, ../sass/style.scss */
 h4 {
   font-family: "Limelight", cursive;
   font-size: 1.8em;
@@ -107,7 +116,7 @@ h4 {
   margin-top: 0.6em;
 }
 
-/* line 94, ../sass/style.scss */
+/* line 93, ../sass/style.scss */
 h5 {
   font-family: "Prata", serif;
   font-size: 1.8em;
@@ -117,90 +126,90 @@ h5 {
 
 /*handy*/
 /* margins for each section in the page */
-/* line 105, ../sass/style.scss */
+/* line 104, ../sass/style.scss */
 .section-margin-top {
   margin-top: 3em;
   margin-bottom: 1em;
 }
 
-/* line 109, ../sass/style.scss */
+/* line 108, ../sass/style.scss */
 .comment-section-margin-top {
   margin-top: 4em;
 }
 
-/* line 112, ../sass/style.scss */
+/* line 111, ../sass/style.scss */
 .comment-mar {
   margin-top: 1.7em;
 }
 
 /*  margin top for */
-/* line 116, ../sass/style.scss */
+/* line 115, ../sass/style.scss */
 .margin-top {
   margin-top: 7.5em;
 }
 
 /*  margin top cms*/
-/* line 121, ../sass/style.scss */
+/* line 120, ../sass/style.scss */
 .margin-top-cms {
   margin-top: 15em;
 }
 
-/* line 125, ../sass/style.scss */
+/* line 124, ../sass/style.scss */
 .margin-bottom {
   margin-bottom: 6em;
 }
 
-/* line 128, ../sass/style.scss */
+/* line 127, ../sass/style.scss */
 .margin-menu-top {
   margin-bottom: 2.5em;
 }
 
-/* line 131, ../sass/style.scss */
+/* line 130, ../sass/style.scss */
 .margin-menu-btm {
   margin-top: 2.5em;
 }
 
-/* line 134, ../sass/style.scss */
+/* line 133, ../sass/style.scss */
 .margin-post {
   margin-top: 2em;
 }
 
-/* line 138, ../sass/style.scss */
+/* line 137, ../sass/style.scss */
 .white {
   color: white;
 }
 
-/* line 139, ../sass/style.scss */
+/* line 138, ../sass/style.scss */
 .primary {
   color: #ed7c98;
 }
 
-/* line 140, ../sass/style.scss */
+/* line 139, ../sass/style.scss */
 .black {
   color: black;
 }
 
-/* line 142, ../sass/style.scss */
+/* line 141, ../sass/style.scss */
 .center {
   text-align: center;
 }
 
-/* line 146, ../sass/style.scss */
+/* line 145, ../sass/style.scss */
 .right {
   float: right;
 }
 
-/* line 148, ../sass/style.scss */
+/* line 147, ../sass/style.scss */
 .left {
   float: left;
 }
 
-/* line 150, ../sass/style.scss */
+/* line 149, ../sass/style.scss */
 .full {
   width: 100%;
 }
 
-/* line 152, ../sass/style.scss */
+/* line 151, ../sass/style.scss */
 .cf:before,
 .cf:after {
   content: " ";
@@ -209,12 +218,12 @@ h5 {
   /* 2 */
 }
 
-/* line 157, ../sass/style.scss */
+/* line 156, ../sass/style.scss */
 .cf:after {
   clear: both;
 }
 
-/* line 160, ../sass/style.scss */
+/* line 159, ../sass/style.scss */
 .margin-auto {
   margin: 0 auto;
 }
@@ -222,7 +231,27 @@ h5 {
 /*********************************************************/
 /*header Navigation*/
 /*********************************************************/
+/* line 169, ../sass/style.scss */
+.menu-small {
+  margin: 1.2em 0em;
+}
 /* line 170, ../sass/style.scss */
+.menu-small li {
+  margin-bottom: 0.5em;
+}
+/* line 172, ../sass/style.scss */
+.menu-small a {
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 1.6em;
+  font-weight: 600;
+  color: black;
+}
+/* line 175, ../sass/style.scss */
+.menu-small a:hover {
+  color: #e75075;
+}
+
+/* line 181, ../sass/style.scss */
 .logo {
   position: absolute;
   top: 22px;
@@ -230,42 +259,58 @@ h5 {
   width: 20%;
 }
 
-/* line 176, ../sass/style.scss */
+/* line 187, ../sass/style.scss */
 .bottom-line {
   border-bottom: 4px black double;
   border-top: 4px black double;
 }
 
-/* line 181, ../sass/style.scss */
+/* line 192, ../sass/style.scss */
 .top-nav ul {
   display: table;
   margin: 0 auto;
   padding: 1em;
 }
-/* line 187, ../sass/style.scss */
+/* line 197, ../sass/style.scss */
 .top-nav li {
   display: table-cell;
   float: left;
 }
 @media all and (max-width: 550px) {
-  /* line 187, ../sass/style.scss */
+  /* line 197, ../sass/style.scss */
   .top-nav li {
     float: none;
   }
 }
-/* line 193, ../sass/style.scss */
+/* line 203, ../sass/style.scss */
 .top-nav li a {
   font-family: "Limelight", cursive;
   font-size: 1.8em;
   color: black;
   margin: 1em;
+  /* Medium only */
+  /* Small only */
 }
-/* line 202, ../sass/style.scss */
+/* line 211, ../sass/style.scss */
 .top-nav li a:hover {
   color: #ed7c98;
 }
+@media screen and (min-width: 40em) and (max-width: 63.9375em) {
+  /* line 203, ../sass/style.scss */
+  .top-nav li a {
+    font-size: 1.8em;
+    margin: 0.7em;
+  }
+}
+@media screen and (max-width: 39.9375em) {
+  /* line 203, ../sass/style.scss */
+  .top-nav li a {
+    font-size: 1.6em;
+    margin: 0.6em;
+  }
+}
 
-/* line 211, ../sass/style.scss */
+/* line 225, ../sass/style.scss */
 .logo {
   width: 8em;
   position: absolute;
@@ -276,7 +321,7 @@ h5 {
 /*********************************************************/
 /*HERO AREA*/
 /*********************************************************/
-/* line 222, ../sass/style.scss */
+/* line 236, ../sass/style.scss */
 .head-back {
   background-image: url("../images/home/hero.jpg");
   background-repeat: no-repeat;
@@ -287,13 +332,13 @@ h5 {
   /*more then the tablet size*/
 }
 @media all and (min-width: 55em) {
-  /* line 222, ../sass/style.scss */
+  /* line 236, ../sass/style.scss */
   .head-back {
     min-height: 75em;
   }
 }
 
-/* line 239, ../sass/style.scss */
+/* line 253, ../sass/style.scss */
 .hero-logo {
   width: 90%;
   margin-top: 23em;
@@ -318,8 +363,52 @@ h5 {
 /*********************************************************/
 /*category*/
 /*********************************************************/
+/*ribbon-day*/
+/* line 282, ../sass/style.scss */
+.ribbon-day {
+  background-color: #ffcac2;
+  position: relative;
+  height: 2.4em;
+  width: 21em;
+  margin: auto;
+  margin-top: 0.5em;
+  margin-bottom: 1em;
+}
+/* line 283, ../sass/style.scss */
+.ribbon-day p {
+  margin-bottom: 0em;
+  text-align: center;
+  font-size: 1.5em;
+  font-family: "Josefin Sans", sans-serif;
+  font-weight: 600;
+}
+
+/* line 289, ../sass/style.scss */
+.ribbon-day:before,
+.ribbon-day:after {
+  content: '';
+  position: absolute;
+  height: 0;
+  border: 12px solid transparent;
+  top: 0;
+  width: 0;
+  border-top-color: #ffcac2;
+  border-bottom-color: #ffcac2;
+  z-index: 1;
+}
+
+/* line 291, ../sass/style.scss */
+.ribbon-day:before {
+  left: -12px;
+}
+
+/* line 292, ../sass/style.scss */
+.ribbon-day:after {
+  right: -12px;
+}
+
 /* TAG for image */
-/* line 268, ../sass/style.scss */
+/* line 294, ../sass/style.scss */
 .points > div {
   display: inline-block;
   width: 100%;
@@ -327,18 +416,18 @@ h5 {
   vertical-align: top;
 }
 
-/* line 274, ../sass/style.scss */
+/* line 300, ../sass/style.scss */
 .points p {
   margin: 1em 0;
 }
 
-/* line 277, ../sass/style.scss */
+/* line 303, ../sass/style.scss */
 .points .image {
   position: relative;
 }
 
 /* ΓæñΓæÑribbon */
-/* line 281, ../sass/style.scss */
+/* line 307, ../sass/style.scss */
 .point-ribbon {
   position: absolute;
   background: #FF797D;
@@ -348,7 +437,7 @@ h5 {
   color: #fff;
 }
 
-/* line 289, ../sass/style.scss */
+/* line 315, ../sass/style.scss */
 .point-ribbon:before {
   position: absolute;
   content: " ";
@@ -356,7 +445,7 @@ h5 {
   width: 0;
 }
 
-/* line 295, ../sass/style.scss */
+/* line 321, ../sass/style.scss */
 .point-ribbon:after {
   position: absolute;
   content: " ";
@@ -365,7 +454,7 @@ h5 {
 }
 
 /* Γæñribbon-l */
-/* line 302, ../sass/style.scss */
+/* line 328, ../sass/style.scss */
 .point-ribbon-l {
   top: 0.7em;
   left: -12px;
@@ -375,7 +464,7 @@ h5 {
   padding-right: 1.2em;
 }
 
-/* line 310, ../sass/style.scss */
+/* line 336, ../sass/style.scss */
 .point-ribbon-l:before {
   left: 0;
   top: 100%;
@@ -383,27 +472,27 @@ h5 {
   border-left: .7em solid transparent;
 }
 
-/* line 316, ../sass/style.scss */
+/* line 342, ../sass/style.scss */
 .point-ribbon-l:after {
   left: 100%;
   border: .9em solid #FF797D;
   border-right: .7em solid transparent;
 }
 
-/* line 322, ../sass/style.scss */
+/* line 348, ../sass/style.scss */
 .article h3 {
-  margin: 0em;
+  margin: 0em 0em 0.3em 0em;
 }
-/* line 323, ../sass/style.scss */
+/* line 349, ../sass/style.scss */
 .article img {
   margin-bottom: 1em;
 }
-/* line 324, ../sass/style.scss */
+/* line 350, ../sass/style.scss */
 .article p {
   margin: 0em 0em 0.5em 0em;
 }
 
-/* line 327, ../sass/style.scss */
+/* line 353, ../sass/style.scss */
 .button.more {
   font-size: 1.5em;
   font-family: "Josefin Sans", sans-serif;
@@ -415,12 +504,12 @@ h5 {
 /*********************************************************/
 /*post*/
 /*********************************************************/
-/* line 337, ../sass/style.scss */
+/* line 363, ../sass/style.scss */
 .recom {
   margin-top: 1.8em;
 }
 
-/* line 340, ../sass/style.scss */
+/* line 366, ../sass/style.scss */
 .blog-day {
   font-family: "Josefin Sans", sans-serif;
   font-size: 2em;
@@ -431,7 +520,7 @@ h5 {
   width: 40%;
 }
 
-/* line 352, ../sass/style.scss */
+/* line 378, ../sass/style.scss */
 .subbtn {
   border: none;
   background-color: #ed7c98;
@@ -439,29 +528,29 @@ h5 {
   padding: 0.4em 3em;
 }
 
-/* line 359, ../sass/style.scss */
+/* line 385, ../sass/style.scss */
 input[type="submit"] {
   font-family: "Limelight", cursive;
 }
 
 /*comment*/
-/* line 364, ../sass/style.scss */
+/* line 390, ../sass/style.scss */
 .arrow_box {
   position: relative;
   background: #ffcac2;
   padding: 1em 2em;
   margin-left: 1.5em;
 }
-/* line 368, ../sass/style.scss */
+/* line 394, ../sass/style.scss */
 .arrow_box p {
   font-size: 1.7em;
   margin-bottom: 0.3em;
 }
-/* line 369, ../sass/style.scss */
+/* line 395, ../sass/style.scss */
 .arrow_box h4 {
   font-size: 1.8em;
 }
-/* line 370, ../sass/style.scss */
+/* line 396, ../sass/style.scss */
 .arrow_box .more {
   color: #e75075;
   font-family: "Josefin Sans", sans-serif;
@@ -469,7 +558,7 @@ input[type="submit"] {
   font-weight: 700;
 }
 
-/* line 376, ../sass/style.scss */
+/* line 402, ../sass/style.scss */
 .arrow_box:after {
   right: 100%;
   top: 50%;
@@ -489,69 +578,69 @@ input[type="submit"] {
 /*footer*/
 /*********************************************************/
 /*footer*/
-/* line 399, ../sass/style.scss */
+/* line 425, ../sass/style.scss */
 .footer-back {
   background-color: black;
   padding-top: 3em;
   margin-top: 5em;
 }
 
-/* line 405, ../sass/style.scss */
+/* line 431, ../sass/style.scss */
 .foot-nav {
   margin-bottom: 4em;
 }
-/* line 407, ../sass/style.scss */
+/* line 433, ../sass/style.scss */
 .foot-nav img {
   width: 60%;
   margin: 2em 0em 1em 0em;
 }
-/* line 411, ../sass/style.scss */
+/* line 437, ../sass/style.scss */
 .foot-nav p {
   color: white;
   margin: 0em;
   font-size: 1.8em;
 }
 
-/* line 417, ../sass/style.scss */
+/* line 443, ../sass/style.scss */
 .foot-bar {
   color: white;
   margin-right: 1.2em;
   padding: 1.8em;
 }
 
-/* line 423, ../sass/style.scss */
+/* line 449, ../sass/style.scss */
 .nav-icon
 i {
   margin: 0.2em;
 }
-/* line 426, ../sass/style.scss */
+/* line 452, ../sass/style.scss */
 .nav-icon
 i:hover {
   color: #ed7c98;
 }
 
-/* line 432, ../sass/style.scss */
+/* line 458, ../sass/style.scss */
 .foot-nav-item li {
   padding: 0.6em;
 }
-/* line 434, ../sass/style.scss */
+/* line 460, ../sass/style.scss */
 .foot-nav-item li a {
   color: white;
   font-family: "Limelight", cursive;
   font-size: 1.5em;
 }
-/* line 439, ../sass/style.scss */
+/* line 465, ../sass/style.scss */
 .foot-nav-item li a:hover {
   color: #ed7c98;
 }
 
 /*form for contact*/
-/* line 447, ../sass/style.scss */
+/* line 473, ../sass/style.scss */
 .contact-form textarea {
   height: 7em;
   margin-bottom: 2em;
 }
-/* line 449, ../sass/style.scss */
+/* line 475, ../sass/style.scss */
 .contact-form label {
   color: white;
   margin-top: 1em;
@@ -559,7 +648,7 @@ i:hover {
   font-size: 1.5em;
 }
 
-/* line 452, ../sass/style.scss */
+/* line 478, ../sass/style.scss */
 [type="submit"] {
   font-family: "Prata", serif;
   font-size: 1.8em;
@@ -568,22 +657,22 @@ i:hover {
 /*********************************************************/
 /*SIDE*/
 /*********************************************************/
-/* line 461, ../sass/style.scss */
+/* line 487, ../sass/style.scss */
 .media-object-section.sideimg {
   width: 35%;
 }
 
-/* line 462, ../sass/style.scss */
+/* line 488, ../sass/style.scss */
 .media-object-section.title {
   width: 65%;
 }
 
-/* line 463, ../sass/style.scss */
+/* line 489, ../sass/style.scss */
 .button.more.right.side {
   width: 4em;
 }
 
-/* line 464, ../sass/style.scss */
+/* line 490, ../sass/style.scss */
 .side {
   padding-left: 3em;
 }
@@ -592,20 +681,20 @@ i:hover {
 /*Cms*/
 /*********************************************************/
 /*LOGIN*/
-/* line 471, ../sass/style.scss */
+/* line 497, ../sass/style.scss */
 .login_container {
   background-color: #ffcac2;
   padding: 5em 0em;
   margin-top: 12em;
 }
-/* line 475, ../sass/style.scss */
+/* line 501, ../sass/style.scss */
 .login_container p {
   font-size: 5em;
   font-family: "Limelight", cursive;
   color: #ed7c98;
 }
 
-/* line 482, ../sass/style.scss */
+/* line 508, ../sass/style.scss */
 .cms-back {
   background-image: url("../images/cms/back.jpg");
   background-repeat: no-repeat;
@@ -613,24 +702,24 @@ i:hover {
   background-size: cover;
 }
 
-/* line 492, ../sass/style.scss */
+/* line 518, ../sass/style.scss */
 .cms-nav li {
   padding: 2em 0em;
   background-color: #ffcac2;
 }
-/* line 495, ../sass/style.scss */
+/* line 521, ../sass/style.scss */
 .cms-nav li a {
   font-family: "Limelight", cursive;
   font-size: 2em;
   color: black;
   padding: 0.3em;
 }
-/* line 502, ../sass/style.scss */
+/* line 528, ../sass/style.scss */
 .cms-nav li a:hover {
   color: #ed7c98;
 }
 
-/* line 508, ../sass/style.scss */
+/* line 534, ../sass/style.scss */
 th {
   background-color: #ed7c98;
   color: white;
@@ -640,53 +729,53 @@ th {
   font-size: 1.5em;
 }
 
-/* line 516, ../sass/style.scss */
+/* line 542, ../sass/style.scss */
 td {
   border: 1px solid;
 }
 
-/* line 519, ../sass/style.scss */
+/* line 545, ../sass/style.scss */
 td:nth-child(2) {
   width: 10%;
 }
 
-/* line 520, ../sass/style.scss */
+/* line 546, ../sass/style.scss */
 td:nth-child(3) {
   width: 20%;
 }
 
-/* line 521, ../sass/style.scss */
+/* line 547, ../sass/style.scss */
 td:nth-child(4) {
   width: 40%;
 }
 
-/* line 522, ../sass/style.scss */
+/* line 548, ../sass/style.scss */
 td:nth-child(5) {
   width: 15%;
 }
 
-/* line 523, ../sass/style.scss */
+/* line 549, ../sass/style.scss */
 td:nth-child(6) {
   width: 15%;
 }
 
-/* line 524, ../sass/style.scss */
+/* line 550, ../sass/style.scss */
 td:nth-child(7) {
   width: 10%;
 }
 
-/* line 525, ../sass/style.scss */
+/* line 551, ../sass/style.scss */
 .list {
   font-family: "Prata", serif;
   font-size: 1.6em;
 }
 
-/* line 529, ../sass/style.scss */
+/* line 555, ../sass/style.scss */
 .small {
   width: 100%;
 }
 
-/* line 532, ../sass/style.scss */
+/* line 558, ../sass/style.scss */
 .table-date {
   font-size: 1.3em;
   font-family: "Josefin Sans", sans-serif;
@@ -697,7 +786,7 @@ td:nth-child(7) {
   text-align: center;
 }
 
-/* line 541, ../sass/style.scss */
+/* line 567, ../sass/style.scss */
 .table-date.list {
   font-size: 1.6em;
   margin: 0.6em 0em;
@@ -707,12 +796,12 @@ td:nth-child(7) {
 /*********************************************************/
 /*Controll jquery class*/
 /*********************************************************/
-/* line 551, ../sass/style.scss */
+/* line 577, ../sass/style.scss */
 .hide {
   display: none;
 }
 
-/* line 554, ../sass/style.scss */
+/* line 580, ../sass/style.scss */
 .show {
   display: block;
 }
