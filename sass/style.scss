@@ -131,7 +131,7 @@ h5{
 	margin-top: 2.5em;
 }
 .margin-post{
-	margin-top: 2em;
+	margin-top: 1.4em;
 }
 
 .white{color: white;}
@@ -284,9 +284,9 @@ p{	margin-bottom: 0em;
 	text-align: center;
 	font:{ size: 1.5em; family: $sans; weight: $semi;}
 }
-	background-color: $tagcol; position: relative; height: 2.4em; width: 21em; margin: auto; margin-top: 0.5em; margin-bottom: 1em;}
+	background-color: $tagcol; position: relative; height: 2.4em; width: 21em; /* margin: auto ;*/ margin-top: 0.5em; margin-bottom: 1em;}
 
-.ribbon-day:before,
+//.ribbon-day:before,
 .ribbon-day:after { content: ''; position: absolute; height:0; border: 12px solid transparent; top: 0; width: 0; border-top-color: $tagcol; border-bottom-color: $tagcol; z-index: 1; }
 .ribbon-day:before { left: -12px; }
 .ribbon-day:after { right: -12px; }
@@ -363,17 +363,19 @@ p{	margin-bottom: 0em;
 .recom{
 	margin-top: 1.8em;
 }
-.blog-day{
-	font:{
-		family: $sans;
-		size: 2em;
-		weight: $bold;
-	}
-	padding: 0em 0.5em;
-	border: 1px solid ;
+.ribbon-day-post { 
+p{	margin-bottom: 0em;
 	text-align: center;
-	width: 40%;
+	font:{ size: 2em; family: $sans; weight: $bold;}
 }
+	background-color: $tagcol; position: relative; height: 3em; width: 25em; /* margin: auto ;*/ margin-top: 0.5em; margin-bottom: 1em;}
+
+//.ribbon-day:before,
+.ribbon-day-post:after { content: ''; position: absolute; height:0; border: 15px solid transparent; top: 0; width: 0; border-top-color: $tagcol; border-bottom-color: $tagcol; z-index: 1; }
+.ribbon-day-post:before { left: -14px; }
+.ribbon-day-post:after { right: -14px; }
+
+
 
 .subbtn{
 	border: none;
@@ -414,7 +416,9 @@ input[type="submit"]{
 	margin-top: -20px;
 }
 
-
+.com-area{
+	font-size: 1.4em;
+}
 
 
 /*********************************************************/

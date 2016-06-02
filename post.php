@@ -92,7 +92,7 @@ if( $numberOfRows == 1){
 			<div class="large-8  medium-8 columns section-margin-top">
 				<div class="row column">
 					<h2><?php echo $title;?></h2>
-					<div class="blog-day"><?php echo $date;?></div>
+					<div class="ribbon-day-post"><p><?php echo $date;?></p></div>
 				</div>
 				<div class="row column">
 					<?php echo $contents;?>
@@ -113,11 +113,11 @@ if( $numberOfRows == 1){
 					<form  action="comment_handler.php" method="post">
 						<input type="hidden" name="blog_id" value="<?php echo  $_GET['id']; ?>" />
 						<input type="hidden" name="category" value="<?php echo $_GET['category'];?>" />
-						<label><i class="fa fa-user margin-post" aria-hidden="true"></i> Name
+						<label><i class="fa fa-user fa-2x margin-post" aria-hidden="true"></i><span class="com-area"> &nbsp;Name</span>
 							<input type="text" name="username"></label>
-							<label><i class="fa fa-pencil" aria-hidden="true"></i> Title
+							<label><i class="fa fa-pencil fa-2x" aria-hidden="true"></i><span class="com-area"> &nbsp;Title</span>
 								<input type="text" name="title"></label>
-								<label><i class="fa fa-comments" aria-hidden="true"></i> Comments
+								<label><i class="fa fa-comments fa-2x" aria-hidden="true"></i> <span class="com-area">&nbsp;Comments</span>
 									<textarea rows="5" type="text" name="comments" placeholder="Any comments here"></textarea></label>
 									<input class="subbtn right" type="submit" value="Submit Comment"/>
 								</form>
