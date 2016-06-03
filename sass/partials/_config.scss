@@ -4,9 +4,11 @@
 ================================*/
 // base config 
 $primary: #ed7c98;
-$tag: #ffcac2;
+$pdark: #e75075;
+$tagcol: #ffcac2;
 $body: #43454a;
 $gategoty: #806561;
+$side:#8d5160;
 
 $loginBack:#a9a8a8;
 
@@ -30,8 +32,10 @@ $head-mar:20em;
 // base config fonts
 // font config 
 
-//font type
-$headding: 'Prata', serif;
+//font typefont-family: 'Quicksand', sans-serif;
+$mini-headding: 'Josefin Sans', sans-serif;
+$headding: 'Prata', sans-serif;
+//$headding: 'Quicksand', sans-serif;
 $mainFont: 'Josefin Slab', serif;
 $headline: 'Prata', serif;
 $menu: 'Limelight', cursive;
@@ -46,7 +50,7 @@ $semi: 600;
 // base config fonts size
 //to make 1em to 10px
 $baseSize: 62.5%;
-$text: 1.8em;
+$text: 1.7em;
 $title: 5.6em;
 $date: 2em;
 $tag: 2em;
@@ -54,13 +58,13 @@ $tag: 2em;
 
 
 //h1 size
-$h1_size: 6em;
+$h1_size: 4em;
 //h2 size
 $h2_size: 4em;
 //h1 size
-$h3_size: 2.4em;
+$h3_size: 2.6em;
 //h4 size
-$h4_size: 1.8em;
+$h4_size: 1.9em;
 //h4 size
 $h5_size: 1.8em;
 //base text size

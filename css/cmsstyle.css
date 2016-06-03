@@ -1,8 +1,3 @@
-/*
-To change this license header, choose License Headers in Project Properties.
-To change this template file, choose Tools | Templates
-and open the template in the editor.
-*/
 /* ==============================
 	  colour
 ================================*/
@@ -60,7 +55,7 @@ form input, form span {
 /* line 52, ../sass/cmsstyle.scss */
 form [type="submit"] {
   text-align: center;
-  font-size: 1.8em;
+  font-size: 1.7em;
   padding: 0em 1em 0em 1em;
 }
 
@@ -145,7 +140,7 @@ form [type="submit"] {
 }
 /* line 138, ../sass/cmsstyle.scss */
 .cms-post [type="submit"] {
-  font-size: 1.8em;
+  font-size: 1.7em;
   padding: 0.2em 1em 0.2em 1em;
   margin-top: 1em;
 }
@@ -160,7 +155,7 @@ form [type="submit"] {
 
 /* line 151, ../sass/cmsstyle.scss */
 [type="file"] {
-  font-size: 1.8em;
+  font-size: 1.7em;
 }
 
  	/* ==============================

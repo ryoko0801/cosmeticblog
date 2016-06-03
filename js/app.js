@@ -15,12 +15,13 @@ function cutText(place,words){
 }
 //list
 cutText(".js-list-title", 50);
-cutText(".js-short-title", 30);
+cutText(".js-short-title", 33);
 cutText(".js-short-title-side", 50);
 cutText(".js-short-text p", 100);
 cutText(".js-short-text-index p", 180);
 cutText(".js-short-title-index p", 70);
-
+//for recom title
+cutText(".js-short-reco-title", 25);
 
 
 
@@ -51,5 +52,45 @@ $('.js-comment').readmore({
   	moreLink: '<a href="#" class="more">Read More</a>',
   	lessLink: '<a href="#" class="more">Close</a>'
 });
+
+//scroll to top
+$(function() {
+    var showFlag = false;
+    var topBtn = $('#page-top');    
+    topBtn.css('bottom', '-100px');
+    var showFlag = false;
+    //when the scroll become 100 showw thye btn
+    $(window).scroll(function () {
+        if ($(this).scrollTop() > 100) {
+            if (showFlag == false) {
+                showFlag = true;
+                topBtn.stop().animate({'bottom' : '20px'}, 200); 
+            }
+        } else {
+            if (showFlag) {
+                showFlag = false;
+                topBtn.stop().animate({'bottom' : '-100px'}, 200); 
+            }
+        }
+    });
+    //go back to top with scroll
+    topBtn.click(function () {
+        $('body,html').animate({
+            scrollTop: 0
+        }, 800);
+        return false;
+    });
+});
+
+//activ sub menu
+$("#submenu a").click(function(){
+	var $href = $(this).attr('href');
+	if(location.href.match($href)) {
+        $(this).addClass('active');
+        } else {
+        $(this).removeClass('active');
+        }
+});
+
 
 });//end of on load

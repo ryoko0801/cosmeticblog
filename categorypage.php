@@ -15,6 +15,7 @@ if($_GET["category"] == "reviews"){
 	else $query = "SELECT * FROM review_table ORDER BY id DESC LIMIT 6";
 	$subcategoryMenu.="<li><a href='categorypage.php?category=reviews&subcategory=eyemakeup#list'>Eye Makeup</a></li>
 	<li><a href='categorypage.php?category=reviews&subcategory=basemakeup#list'>Base Makeup</a></li>
+	<li><a href='categorypage.php?category=reviews&subcategory=lipmakeup#list'>Lip Makeup</a></li>
 	<li><a href='categorypage.php?category=reviews&subcategory=skincare#list'>Skin care</a></li>
 	<li><a href='categorypage.php?category=reviews&subcategory=perfume#list'>Perfume</a></li>
 	<li><a href='categorypage.php?category=reviews&subcategory=makeuptool#list'>Tools</a></li>";
@@ -42,7 +43,8 @@ if( $numberOfRows > 0 ){
 		$id = $row["id"];
 		$subcategory = $row["subcategory"];
 		$title = $row["title"];
-		$date = $row["posted_date"];
+		$day = $row["posted_date"];
+		$date = date(" F jS Y");
 		$contents = $row["contents"];
 		$image = $row["image"];
 		$tag = $row["tag"];
@@ -52,17 +54,16 @@ if( $numberOfRows > 0 ){
 					<div class='points'>
 						<div class='image'><img src='./images/thumb/".$image."'><span class='point-ribbon point-ribbon-l'>".$subcategory."</span></div>
 					</div>
-					<h3 class='js-short-title'>".$title."</h3>
-					<div class='table-date list'>".$date."</div>
+					<div class='ribbon-day '><p>".$date."</p></div>
+					<h3 class='js-short-title '>".$title."</h3>
 					<span class='js-short-text'>".$contents."</span>
 					<a class='button more right' href='post.php?category=".$category."&id=".$id."'>Read More</a>
 			`		</div>";
 		}
 	}//end of while
-	var_dump($numberOfRowsSide);
 	mysqli_close($conn);
 ;?>
-		<body>
+
 			<div class="row columns">
 				<img src="http://placehold.it/1200x400">
 			</div>
@@ -70,8 +71,8 @@ if( $numberOfRows > 0 ){
 				<!-- new post -->
 				<div class="large-8  medium-8 columns ">
 					<div class ="bottom-line center margin-menu-btm">
-						<div id="sub-nav" class ="top-nav">
-							<ul class="">
+						<div id="sub-nav" class ="top-nav sub-menu">
+							<ul id="submenu" class="sub-menu">
 								<li><a href="categorypage.php?category=<?php echo $_GET["category"];?>#list">New</a></li>
 								<?php echo $subcategoryMenu; ?>
 							</ul>

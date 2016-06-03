@@ -14,6 +14,7 @@ if(isset($_GET["category"])){
 			$subcategoryOption .="<select name='subcategory' required>
 					<option value='eyemakeup'>Eye Makeup</option>
 					<option value='basemakeup'>Base Makeup</option>
+					<option value='lipmakeup'>Lip Makeup</option>
 					<option value='skincare'>Skin care</option>
 					<option value='perfume'>Perfume</option>
 					<option value='makeuptool'>Makeup tools</option>

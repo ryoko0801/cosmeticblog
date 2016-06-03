@@ -26,81 +26,88 @@
 		color: $body;
 		line-height: 1.4;
 		background:{ image:url("../images/back.jpg");
-					size: cover;
-					repeat: no-repeat;
-					attachment: fixed;
+			size: cover;
+			repeat: no-repeat;
+			attachment: fixed;
 		}
 //back base white
-	.base-back{background:white(0.7);
-		width: 120em;
-		margin: 0 auto;
-		@media all and (max-width: 550px){
-			width: 90%;
-		}
+.base-back{background:white(0.7);
+	margin: 0 auto;
+	padding-top: 1em;
+	padding-bottom: 5em;
+		/* Large and up */
+		@media screen and (min-width: 64em) {width: 115em;}
+		/* Medium only */
+		@media screen and (min-width: 40em) and (max-width: 63.9375em) {width: 60em;}
+		/* Small only */
+		@media screen and (max-width: 39.9375em) {width: 39em;}
 	}
-		
+}
+ul, li{
+	margin: 0;
+	padding: 0;
+}
+li{
+	list-style: none;
+}
+p{
+	font:{
+		size:$text;
 	}
-	ul, li{
-		margin: 0;
-		padding: 0;
+	font-family: $mainFont;
+	margin-top:0.5em;
+	color: $body;
+}
+h1{
+	font:{
+		family:$headding;
+		size: $h1_size;
+		//weight: $bold;
 	}
-	li{
-		list-style: none;
+	color: $primary;
+	margin-bottom:0.2em; 
+}
+h2{
+	font:{
+		family:$headding;
+		size: $h2_size;
 	}
-	p{
-		font:{
-			size:$text;
-		}
-		font-family: $mainFont;
-		margin-top:0.5em;
-		color: $body;
+	color: $primary;
+}
+h3{
+	font:{
+		family:$headding;
+		size: $h3_size;
+		//weight: $bold;
 	}
+	color: $primary;
+}
+h4{
+	font:{
+		family:$menu;
+		size: $h4_size;
+	}
+	color: black;
+	margin-top: 0.6em;
+}
+h5{
+	font:{
+		family:$mini-headding;
+		weight: $semi;
+		size: $h5_size;
+	}
+	color: $side;
+	//margin-top: 0.3em;
+}
 
-
-	h1{
-		font:{
-			family:$headding;
-			size: $h1_size;
-		}
-		color: $primary;
-		margin-bottom:0.2em; 
-	}
-
-	h2{
-		font:{
-			family:$headding;
-			size: $h2_size;
-		}
-		color: $primary;
-	}
-
-	h3{
-		font:{
-			family:$headding;
-			size: $h3_size;
-		}
-		color: $primary;
-	}
-	h4{
-		font:{
-			family:$menu;
-			size: $h4_size;
-		}
-		color: black;
-		margin-top: 0.6em;
-	}
-	
-
-	h5{
-		font:{
-			family:$headding;
-			size: $h5_size;
-		}
-		color: $primary;
-		margin-top: 0.3em;
-	}
-	
 /*handy*/
+/*blog-margin*/
+#list {
+	margin-top:2em;
+}
+.blog-mar{
+	margin-bottom: 0.5em;
+}
 /* margins for each section in the page */
 .section-margin-top{
 	margin-top:3em;
@@ -132,7 +139,7 @@
 	margin-top: 2.5em;
 }
 .margin-post{
-	margin-top: 2em;
+	margin-top: 1.4em;
 }
 
 .white{color: white;}
@@ -167,53 +174,86 @@
 /*********************************************************/
 			/*header Navigation*/
 /*********************************************************/
-.logo{
-	position: absolute;
-	top: 22px;
-	left: 100px;
-	width: 20%;
-}
-.bottom-line{
-	border-bottom: 4px black double;
-	border-top: 4px black double;
-}
-.top-nav{
-	ul{
-
-		display:table;
-		margin:0 auto;
-		padding: 1em;
-	}
-	li{ 
-		display:table-cell;
-		float: left;
-		@media all and (max-width: 550px){
-			float: none;
-		}
-		a{
-
-			font:{ 
-				family: $menu;
-				size: 1.8em;
+.menu-small{
+	li{margin-bottom:0.5em;}
+	margin: 1.2em 0em;
+	a{
+		font:{family: $sans; size: 1.6em; weight: $semi;}
+		color: black;
+		&:hover{
+			color: $pdark;
+				//
 			}
-			color: black;
-			margin: 1em;
+		}	
+	}
+	.logo{
+		position: absolute;
+		top: 22px;
+		left: 100px;
+		width: 20%;
+	}
+	.tnav-top-line{
+		//border-bottom: 4px black double;
+		border-top: 4px black double;
+	}
+	.tnav-btm-line{
+		border-bottom: 4px black double;
+	}
+	.bottom-line{
+		border-bottom: 4px black double;
+		border-top: 4px black double;
+	}
+	.top-nav{
+		ul{
+			display:table;
+			margin:0 auto;
+			padding: 1em;
+		}
+		li{ 
+			display:table-cell;
+			float: left;
+			@media all and (max-width: 550px){
+				float: none;
+			}
+			a{
+				font:{ 
+					family: $menu;
+					size: 1.9em;
+				}
+				color: black;
+				margin: 1.1em;
 			//padding:0.3em;
 			&:hover{
 				color: $primary;
-				//padding:0.3em;
 			}
-		}
+			/* Medium only */
+			@media screen and (min-width: 40em) and (max-width: 63.9375em) {font-size: 1.8em;
+				margin: 0.7em;
+			}
+		/* Small only */
+		@media screen and (max-width: 39.9375em) {font-size: 1.6em; margin: 0.6em;}
+	}
 
+}
+}
+
+.top-nav.top{
+	li{ 	
+		a{
+			font:{ 
+				family: $menu;
+				size: 2.1em;
+			}
+			margin: 0.6em;
+		}
 	}
 }
-
-.logo{
-	width: 8em;
-	position: absolute;
-	top: 13px;
-	left: 200px;
-}
+	.logo{
+		width: 8em;
+		position: absolute;
+		top: 13px;
+		left: 200px;
+	}
 
 /*********************************************************/
 			/*HERO AREA*/
@@ -257,13 +297,25 @@ display:block;
 @keyframes heart-beats {
     to { transform: scale(1.1); }
 }  */
-	
+
 
 
 
 /*********************************************************/
 			/*category*/
 /*********************************************************/
+/*ribbon-day*/
+.ribbon-day { 
+	p{	margin-bottom: 0em;
+		text-align: center;
+		font:{ size: 1.7em; family: $sans; weight: $semi;}
+	}
+	background-color: $tagcol; position: relative; height: 2.4em; width: 21em; /* margin: auto ;*/ margin-top: 0.5em; margin-bottom: 1em;}
+
+//.ribbon-day:before,
+.ribbon-day:after { content: ''; position: absolute; height:0; border: 12px solid transparent; top: 0; width: 0; border-top-color: $tagcol; border-bottom-color: $tagcol; z-index: 1; }
+.ribbon-day:before { left: -12px; }
+.ribbon-day:after { right: -12px; }
 /* TAG for image */
 .points > div {
 	display: inline-block;
@@ -300,7 +352,7 @@ display:block;
 }
 /* ⑤ribbon-l */
 .point-ribbon-l {
-	top: 0.7em;
+	top: 0.4em;
 	left: -12px;
 	height: 1.8em;
 	line-height: 1.7;
@@ -319,7 +371,7 @@ display:block;
 	border-right:.7em solid transparent;
 }
 .article {
-	h3{margin: 0em;}
+	h3{margin: 0em 0em 0.3em 0em;}
 	img{margin-bottom: 1em;}
 	p{ margin: 0em 0em 0.5em 0em;}
 }
@@ -337,35 +389,43 @@ display:block;
 .recom{
 	margin-top: 1.8em;
 }
-.blog-day{
-	font:{
-		family: $sans;
-		size: 2em;
-		weight: $bold;
-	}
-		padding: 0em 0.5em;
-		border: 1px solid ;
+.ribbon-day-post { 
+	
+	p{	margin-bottom: 0em;
 		text-align: center;
-		width: 40%;
-}
-
-	.subbtn{
-			border: none;
-		
-			background-color: $primary;
-			color: #fff;
-			padding: 0.4em 3em;
-		}
-	input[type="submit"]{
-			font-family: $menu;
+		font:{ size: 1.7em; family: $sans; weight: $bold;}
 	}
+	background-color: $tagcol; position: relative; height: 2.65em; width: 25em; /* margin: auto ;*/ margin-top: 0.5em; margin-bottom: 2em;}
+
+//.ribbon-day:before,
+.ribbon-day-post:after { content: ''; position: absolute; height:0; border: 13px solid transparent; top: 0; width: 0; border-top-color: $tagcol; border-bottom-color: $tagcol; z-index: 1; }
+.ribbon-day-post:before { left: -14px; }
+.ribbon-day-post:after { right: -14px; }
+
+
+
+.subbtn{
+	border: none;
+
+	background-color: $primary;
+	color: #fff;
+	padding: 0.4em 3em;
+}
+input[type="submit"]{
+	font-family: $menu;
+}
 
 /*comment*/
 .arrow_box {
 	position: relative;
 	background: #ffcac2;
-	padding: 1em 2em;
-	p{ font-size: 1.7em; margin-bottom: 0.3em;}
+	padding: 0.6em 2em;
+	.com-date {
+		margin-bottom: 0em;
+		font:{family: $sans; size: 1.4em; weight: $semi;}
+	}
+
+	.content { font-size: 1.7em; margin-bottom: 0.3em;}
 	h4{font-size: 1.8em;}
 	.more{ 
 		color: #e75075; 
@@ -388,8 +448,16 @@ display:block;
 	margin-top: -20px;
 }
 
-
-
+.com-area{
+	font-size: 1.3em;
+}
+i.fa-s {
+	font-size: 1.4em;
+}
+.link-sephora{
+	color: $pdark;
+	font:{ weight: $semi; family: $sans; size: 1.8em; }
+}
 
 /*********************************************************/
 			/*footer*/
@@ -399,7 +467,7 @@ display:block;
 .footer-back{
 	background-color: black;
 	padding-top: 3em;
-	margin-top: 5em;
+	//margin-top: 5em;
 }
 
 .foot-nav{
@@ -444,15 +512,18 @@ i{
 
 /*form for contact*/
 .contact-form{
-	textarea{ height: 7em;
-		margin-bottom: 2em;}
-		label{color: white;     margin-top: 1em; 
-			font-family: $headding; font-size: 1.5em;}
-		}
-		[type="submit"]{
-			font-family: $headding; 
-			font-size: 1.8em;
-		}
+	margin-top: 4em;
+	h4{font-size: 3em; margin-bottom: 1.5em;}
+	textarea{ height: 6em;
+		margin-bottom: 1.5em;}
+		label{color:black;     margin-top: 1em; }
+	}
+	[type="submit"]{
+		font-family: $headding; 
+		font-size: 1.8em;
+		padding:0.7em 1.5em;
+	}
+	.con-img{margin-top: 5em;}
 
 
 /*********************************************************/
@@ -462,6 +533,32 @@ i{
 .media-object-section.title{ width: 65%;}
 .button.more.right.side{ width: 4em;}
 .side{ padding-left: 3em;}
+
+
+#page-top {
+	position: fixed;
+	bottom: 20px;
+	right: 30px;
+	font-size: 1.4em;
+	font-family: $menu;
+}
+#page-top a {
+	background: $tagcol;
+	text-decoration: none;
+	color: black;
+	width: 6em;
+	height: 6em;
+	padding: 17px 0;
+	text-align: center;
+	display: block;
+	border-radius: 50%;
+}
+#page-top a:hover {
+	text-decoration: none;
+	background-color: $primary;
+}
+
+
 
 
 /*********************************************************/
