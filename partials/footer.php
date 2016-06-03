@@ -1,3 +1,7 @@
+        <!-- scroll btn -->
+          <p id="page-top"><a href="#wrap"><i class="fa fa-arrow-up" aria-hidden="true"></i><br/>PAGE TOP</a></p> 
+          </div>
+<!-- footer -->
        <section class="footer-back">
        	<div class="row">
        		<div class="large-6 columns">
@@ -13,16 +17,12 @@
        		<div class="medium-6 large-6 columns">
 
        			<div class="foot-bar right">
-       				<ul class="right">
        					<ul class="foot-nav-item">
                     <li class="left"><a href="#">What’s New</a></li>
-                    <li class="left"><a href="categorypage.php?category=reviews">Reviews</a></li>    
-                    <li class="left"><a href="categorypage.php?category=trend">Trend</a></li>         
-                    <li class="left"><a href="about.php">About</a></li>         
+                    <li class="left"><a href="categorypage.php?category=reviews">Reviews</a></li>
+                    <li class="left"><a href="categorypage.php?category=trend">Trend</a></li>     <li class="left"><a href="about.php">About</a></li>         
                     <li class="left"><a href="contact.php">Contact</a></li>
                 </ul>
-              </ul>
-
               <ul class="right nav-icon">
                 <li class="left">
                  <a href='#'><i class="fa fa-facebook-square fa-3x white"></i></a>
@@ -51,9 +51,9 @@
      <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
     <script src="js/node_modules/readmore-js/readmore.min.js"></script>
      <script src="js/vendor/foundation.js"></script>
-      <script src="js/jquery.matchHeight.js" type="text/javascript"></script>
+     <script src="js/jquery.matchHeight.js" type="text/javascript"></script>
 
      <script src="js/app.js"></script>
-</div>
+
    </body>
    </html>

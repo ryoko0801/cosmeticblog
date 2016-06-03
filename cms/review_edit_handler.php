@@ -23,9 +23,10 @@ if(isset($_POST['updateSubmit'])) {
 	$image =mysqli_real_escape_string($conn,$newImg);
 	$tag = mysqli_real_escape_string($conn,$_POST['tag']);
 	//$category = mysqli_real_escape_string($conn, $_POST['category']);
-	$day =  date_create();
+	/*$day =  date_create();
 	$date = date_format($day," H:i  F jS Y");
-	var_dump($date);
+	var_dump($date);*/
+	$date =  date("Y-m-d");
 
 	if($_POST["category"] == "reviews"){
 		$updateQuery = "UPDATE review_table
@@ -61,4 +62,7 @@ if(isset($_POST['updateSubmit'])) {
 
 
 
+
+
+	
 

@@ -32,11 +32,11 @@ if(isset($_POST["submit"])){
 	$resultInsert = mysqli_query($conn, $sqlQuery);
 	if($resultInsert == false){
 		echo $conn->error;
-		//echo "Sorrry! There is a error with the post a New blog, Try again. <a href='newpost.php?category=".$category."'> </a>";
+		echo "Sorrry! There is a error with the post a New blog, Try again. <a href='newpost.php?category=".$category."'> </a>";
 		exit;
 	}
 	else{
-		//echo "<script> location.replace('reviewpage_list.php?category=".$category."'); </script>";
+		echo "<script> location.replace('reviewpage_list.php?category=".$category."'); </script>";
 	}
 }
 //close the connection

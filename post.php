@@ -40,7 +40,8 @@ if( $numberOfRows == 1){
 	while( $row = mysqli_fetch_assoc($queryPostResult)){
 		$subcategory = $row["subcategory"];
 		$title = $row["title"];
-		$date = $row["posted_date"];
+		$day = $row["posted_date"];
+		$date = date(" F jS Y");
 		$contents = $row["contents"];
 		$image = $row["image"];
 		$tag = $row["tag"];
@@ -69,23 +70,24 @@ if( $numberOfRows == 1){
 			$titleComment = $row["title"];
 			$nameComment = $row["username"];
 			$commentComment = $row["comments"];	
+			$commentDate = $row["date_posted"];	
 		//comments for the post
 			$comment.= "<div class='row js-com comment-mar'>
 								<div class='large-2  medium-2 small-2 columns center'>
-									<img src= 'http://placehold.it/100x100' >
+									<img src= './images/com.jpg' >
 									<p style='margin-bottom: 0em'>".$nameComment."</p>
 								</div>
 								<div class='large-10 medium-10 small-10 columns'>
 									<div class='arrow_box'>
 										<h4>".$titleComment."</h4>
-										<p class='js-comment'>".$commentComment ."</p>
+										<p class='com-date'>".$commentDate."</p>
+										<p class='js-comment content'>".$commentComment ."</p>
 									</div>	
 								</div>
 								</div>";
 		}
 	}//end of recommend query 
 	?>
-	<body>
 		<div class="row columns">
 			<img src="http://placehold.it/1200x400">
 		</div>
@@ -93,18 +95,19 @@ if( $numberOfRows == 1){
 			<!-- new post -->
 			<div class="large-8  medium-8 columns section-margin-top">
 				<div class="row column">
-					<h2><?php echo $title;?></h2>
+					<h1><?php echo $title;?></h1>
 					<div class="ribbon-day-post"><p><?php echo $date;?></p></div>
 				</div>
 				<div class="row column">
 					<?php echo $contents;?>
+					<a class="link-sephora right" href='http://www.sephora.com/'/>Shop at SEPHORA</a>
 				</div>
 				<!-- reccomended post -->
 				<div class ="bottom-line center margin-menu-btm">
 					<h4>You Might like this</h4>
 				</div>
 				<div class='row recom'>
-					<?php echo $recommendedPost; var_dump($recommendedPost);?>
+					<?php echo $recommendedPost; ?>
 				</div>
 				<!-- end of recommended post list -->
 				<!-- reccomended post -->
@@ -143,4 +146,5 @@ if( $numberOfRows == 1){
 						</div><!--    end of side-->
 					</div><!-- end of top row -->
 					<!-- end side bar -->
+				
 					<?php include("partials/footer.php"); 

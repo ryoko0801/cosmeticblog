@@ -33,6 +33,8 @@
 //back base white
 .base-back{background:white(0.7);
 	margin: 0 auto;
+	padding-top: 1em;
+	padding-bottom: 5em;
 		/* Large and up */
 		@media screen and (min-width: 64em) {width: 115em;}
 		/* Medium only */
@@ -40,7 +42,6 @@
 		/* Small only */
 		@media screen and (max-width: 39.9375em) {width: 39em;}
 	}
-
 }
 ul, li{
 	margin: 0;
@@ -61,6 +62,7 @@ h1{
 	font:{
 		family:$headding;
 		size: $h1_size;
+		//weight: $bold;
 	}
 	color: $primary;
 	margin-bottom:0.2em; 
@@ -72,11 +74,11 @@ h2{
 	}
 	color: $primary;
 }
-
 h3{
 	font:{
 		family:$headding;
 		size: $h3_size;
+		//weight: $bold;
 	}
 	color: $primary;
 }
@@ -88,18 +90,24 @@ h4{
 	color: black;
 	margin-top: 0.6em;
 }
-
-
 h5{
 	font:{
-		family:$headding;
+		family:$mini-headding;
+		weight: $semi;
 		size: $h5_size;
 	}
-	color: $primary;
-	margin-top: 0.3em;
+	color: $side;
+	//margin-top: 0.3em;
 }
 
 /*handy*/
+/*blog-margin*/
+#list {
+	margin-top:2em;
+}
+.blog-mar{
+	margin-bottom: 0.5em;
+}
 /* margins for each section in the page */
 .section-margin-top{
 	margin-top:3em;
@@ -184,6 +192,13 @@ h5{
 		left: 100px;
 		width: 20%;
 	}
+	.tnav-top-line{
+		//border-bottom: 4px black double;
+		border-top: 4px black double;
+	}
+	.tnav-btm-line{
+		border-bottom: 4px black double;
+	}
 	.bottom-line{
 		border-bottom: 4px black double;
 		border-top: 4px black double;
@@ -203,31 +218,42 @@ h5{
 			a{
 				font:{ 
 					family: $menu;
-					size: 1.8em;
+					size: 1.9em;
 				}
 				color: black;
-				margin: 1em;
+				margin: 1.1em;
 			//padding:0.3em;
 			&:hover{
 				color: $primary;
 			}
 			/* Medium only */
-		@media screen and (min-width: 40em) and (max-width: 63.9375em) {font-size: 1.8em;
+			@media screen and (min-width: 40em) and (max-width: 63.9375em) {font-size: 1.8em;
 				margin: 0.7em;
-		}
+			}
 		/* Small only */
 		@media screen and (max-width: 39.9375em) {font-size: 1.6em; margin: 0.6em;}
-		}
+	}
 
+}
+}
+
+.top-nav.top{
+	li{ 	
+		a{
+			font:{ 
+				family: $menu;
+				size: 2.1em;
+			}
+			margin: 0.6em;
+		}
 	}
 }
-
-.logo{
-	width: 8em;
-	position: absolute;
-	top: 13px;
-	left: 200px;
-}
+	.logo{
+		width: 8em;
+		position: absolute;
+		top: 13px;
+		left: 200px;
+	}
 
 /*********************************************************/
 			/*HERO AREA*/
@@ -280,10 +306,10 @@ display:block;
 /*********************************************************/
 /*ribbon-day*/
 .ribbon-day { 
-p{	margin-bottom: 0em;
-	text-align: center;
-	font:{ size: 1.5em; family: $sans; weight: $semi;}
-}
+	p{	margin-bottom: 0em;
+		text-align: center;
+		font:{ size: 1.7em; family: $sans; weight: $semi;}
+	}
 	background-color: $tagcol; position: relative; height: 2.4em; width: 21em; /* margin: auto ;*/ margin-top: 0.5em; margin-bottom: 1em;}
 
 //.ribbon-day:before,
@@ -326,7 +352,7 @@ p{	margin-bottom: 0em;
 }
 /* ⑤ribbon-l */
 .point-ribbon-l {
-	top: 0.7em;
+	top: 0.4em;
 	left: -12px;
 	height: 1.8em;
 	line-height: 1.7;
@@ -364,14 +390,15 @@ p{	margin-bottom: 0em;
 	margin-top: 1.8em;
 }
 .ribbon-day-post { 
-p{	margin-bottom: 0em;
-	text-align: center;
-	font:{ size: 2em; family: $sans; weight: $bold;}
-}
-	background-color: $tagcol; position: relative; height: 3em; width: 25em; /* margin: auto ;*/ margin-top: 0.5em; margin-bottom: 1em;}
+	
+	p{	margin-bottom: 0em;
+		text-align: center;
+		font:{ size: 1.7em; family: $sans; weight: $bold;}
+	}
+	background-color: $tagcol; position: relative; height: 2.65em; width: 25em; /* margin: auto ;*/ margin-top: 0.5em; margin-bottom: 2em;}
 
 //.ribbon-day:before,
-.ribbon-day-post:after { content: ''; position: absolute; height:0; border: 15px solid transparent; top: 0; width: 0; border-top-color: $tagcol; border-bottom-color: $tagcol; z-index: 1; }
+.ribbon-day-post:after { content: ''; position: absolute; height:0; border: 13px solid transparent; top: 0; width: 0; border-top-color: $tagcol; border-bottom-color: $tagcol; z-index: 1; }
 .ribbon-day-post:before { left: -14px; }
 .ribbon-day-post:after { right: -14px; }
 
@@ -392,8 +419,13 @@ input[type="submit"]{
 .arrow_box {
 	position: relative;
 	background: #ffcac2;
-	padding: 1em 2em;
-	p{ font-size: 1.7em; margin-bottom: 0.3em;}
+	padding: 0.6em 2em;
+	.com-date {
+		margin-bottom: 0em;
+		font:{family: $sans; size: 1.4em; weight: $semi;}
+	}
+
+	.content { font-size: 1.7em; margin-bottom: 0.3em;}
 	h4{font-size: 1.8em;}
 	.more{ 
 		color: #e75075; 
@@ -417,12 +449,15 @@ input[type="submit"]{
 }
 
 .com-area{
-	font-size: 1.4em;
+	font-size: 1.3em;
 }
 i.fa-s {
-    font-size: 1.6em;
+	font-size: 1.4em;
 }
-
+.link-sephora{
+	color: $pdark;
+	font:{ weight: $semi; family: $sans; size: 1.8em; }
+}
 
 /*********************************************************/
 			/*footer*/
@@ -432,7 +467,7 @@ i.fa-s {
 .footer-back{
 	background-color: black;
 	padding-top: 3em;
-	margin-top: 5em;
+	//margin-top: 5em;
 }
 
 .foot-nav{
@@ -477,15 +512,18 @@ i{
 
 /*form for contact*/
 .contact-form{
-	textarea{ height: 7em;
-		margin-bottom: 2em;}
-		label{color: white;     margin-top: 1em; 
-			font-family: $headding; font-size: 1.5em;}
-		}
-		[type="submit"]{
-			font-family: $headding; 
-			font-size: 1.8em;
-		}
+	margin-top: 4em;
+	h4{font-size: 3em; margin-bottom: 1.5em;}
+	textarea{ height: 6em;
+		margin-bottom: 1.5em;}
+		label{color:black;     margin-top: 1em; }
+	}
+	[type="submit"]{
+		font-family: $headding; 
+		font-size: 1.8em;
+		padding:0.7em 1.5em;
+	}
+	.con-img{margin-top: 5em;}
 
 
 /*********************************************************/
@@ -495,6 +533,32 @@ i{
 .media-object-section.title{ width: 65%;}
 .button.more.right.side{ width: 4em;}
 .side{ padding-left: 3em;}
+
+
+#page-top {
+	position: fixed;
+	bottom: 20px;
+	right: 30px;
+	font-size: 1.4em;
+	font-family: $menu;
+}
+#page-top a {
+	background: $tagcol;
+	text-decoration: none;
+	color: black;
+	width: 6em;
+	height: 6em;
+	padding: 17px 0;
+	text-align: center;
+	display: block;
+	border-radius: 50%;
+}
+#page-top a:hover {
+	text-decoration: none;
+	background-color: $primary;
+}
+
+
 
 
 /*********************************************************/
